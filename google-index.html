@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Google-Index-Kami</title>
+    <style>
+        * {
+            font-family: "Noto Sans TC", sans-serif;
+            letter-spacing: 1.5px;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo {
+            margin: 80px auto;
+            width: 300px;
+            height: 100px;
+        }
+
+        .logo>img {
+            width: 100%;
+        }
+
+        .search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 550px;
+            height: 50px;
+            border-radius: 120px;
+            box-shadow: 2px 2px 20px rgba(215, 215, 215, 0.5);
+            border: 1px solid #d7d7d7;
+            margin: 0 auto;
+        }
+
+        .input {
+            width: 300px;
+            font-size: 16px;
+            outline: none;
+            border: 0;
+            margin-left: 20px;
+        }
+
+        .icon {
+            color: #54585d;
+        }
+
+        .itembar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            margin: 10px auto;
+            font-size: 12px;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 110px;
+            width: 110px;
+            padding: 10px;
+        }
+
+        .item:hover {
+            background-color: #e4e5e6;
+            border-radius: 20%;
+        }
+
+        .item-logo {
+            margin-bottom: 10px;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #eff1f2;
+            margin-bottom: 10px;
+        }
+
+        .item-logo_font {
+            color: #5d5d5d;
+            font-size: 20px;
+        }
+
+        .more {
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: end;
+            width: 30px;
+            height: 30px;
+            background-color: #cdcdcd;
+            border-radius: 50%;
+        }
+
+        .more:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="logo"><img
+                src="https://www.google.com.tw/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="logo"
+                style=""></div>
+
+        <div class="search">
+            <div><a href="javascript: void(0)"><i class="fa-solid fa-magnifying-glass icon"></a></i>
+                <input class="input" type="text" placeholder="搜尋 Google 或輸入網址">
+            </div>
+            <a href="#javascript: void(0)"><i class="fa-solid fa-microphone icon"></i></a>
+        </div>
+        <span class="itembar">
+            <span class="item">
+                <a class="more" href="#javascript: void(0)"><i
+                        class="fa-solid fa-ellipsis-vertical item-logo_font"></i></a>
+                <a class="item-logo" href="#javascript: void(0)"><i class="fa-solid fa-paw item-logo_font"></i></a>
+                <div class="icon-name">Pikabu</div>
+            </span>
+            <span class="item">
+                <a class="more" href="#javascript: void(0)"><i
+                        class="fa-solid fa-ellipsis-vertical item-logo_font"></i></a>
+                <a class="item-logo" href="#javascript: void(0)"><i class="fa-solid fa-cat item-logo_font"></i></a>
+                <div class="icon-name">Goodnight</div>
+            </span>
+            <span class="item">
+                <a class="more" href="#javascript: void(0)"><i
+                        class="fa-solid fa-ellipsis-vertical item-logo_font"></i></a>
+                <a class="item-logo" href="#javascript: void(0)"><i class="fa-solid fa-w item-logo_font"></i></a>
+                <div class="icon-name">Wootalk</div>
+            </span>
+            <span class="item">
+                <a class="more" href="#javascript: void(0)"><i
+                        class="fa-solid fa-ellipsis-vertical item-logo_font"></i></a>
+                <a class="item-logo" href="#javascript: void(0)"><i class="fa-solid fa-fire item-logo_font"></i></a>
+                <div class="icon-name">Tinder</div>
+            </span>
+            <span class="item">
+                <a class="more" href="#javascript: void(0)"><i
+                        class="fa-solid fa-ellipsis-vertical item-logo_font"></i></a>
+                <a class="item-logo" href="#javascript: void(0)"><i class="fa-solid fa-otter item-logo_font"></i></a>
+                <div class="icon-name">Omi</div>
+            </span>
+        </span>
+
+    </div>
+</body>
+
+</html>
