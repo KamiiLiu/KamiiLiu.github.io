@@ -8,7 +8,8 @@
     <title>Shopee-Kami</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
     <style>
         * {
             font-family: "Noto Sans TC", sans-serif;
@@ -53,10 +54,10 @@
             margin-right: 20px;
         }
 
-        li:nth-child(2) {
-            width: 2px;
-            height: 20px;
-            background-color: #d3d3d3;
+        li:first-child::after {
+            margin-left: 20px;
+            content: '｜';
+            color: #d3d3d3;
         }
 
         li>img {
@@ -126,13 +127,10 @@
 </head>
 
 <body>
-
     <div class="wrap">
         <div class="header">
             <ul class="header-left">
                 <li><a href="#javascript: void(0)">蝦皮商城</a></li>
-                <li>
-                <li>
                 <li><img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/6c502a2641457578b0d5f5153b53dd5d.png"
                         alt="15天鑑賞期"><span>15天鑑賞期</span></li>
                 <li><img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/16ead7e0a68c3cff9f32910e4be08122.png"
