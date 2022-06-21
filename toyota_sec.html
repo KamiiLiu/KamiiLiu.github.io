@@ -9,214 +9,188 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <style>
         * {
-            font-family: "Roboto", sans-serif;
-        }
+  font-family: "Roboto", sans-serif;
+}
 
-        .wrap {
-            margin: 0 auto;
-        }
+.wrap {
+  margin: 0 auto;
+}
+.wrap > div {
+  position: relative;
+}
 
-        .wrap>div {
-            position: relative;
-        }
+.row2 div:last-child {
+  color: #fff;
+  background-color: #000;
+  padding: 10% 5%;
+  letter-spacing: 0.5px;
+}
+.row2 div:last-child h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
 
-        .row2 div:last-child {
-            color: #fff;
-            background-color: #000;
-            padding: 10% 5%;
-            letter-spacing: 0.5px;
-        }
+.row2 div:first-child {
+  background-color: #bb0404;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.row2 div:first-child h2 {
+  line-height: 120px;
+  font-size: 40px;
+  font-weight: 400;
+}
+.row2 div:first-child p {
+  order: -1;
+  font-size: 100px;
+  font-weight: 100;
+  writing-mode: vertical-rl;
+  vertical-align: bottom;
+  margin-left: -10px;
+}
 
-        .row2 div:last-child h3 {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
+.pic {
+  position: relative;
+}
+.pic img {
+  width: 100%;
+}
+.pic .btn {
+  width: 15%;
+  height: 20%;
+  background-color: #bb0404;
+  position: absolute;
+  top: 40%;
+  left: 42.5%;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pic .btn::after {
+  display: block;
+  content: "";
+  border-top: 2vw solid transparent;
+  border-left: 4vw solid #fff;
+  border-bottom: 2vw solid transparent;
+}
 
-        .row2 div:first-child {
-            background-color: #bb0404;
-            color: #fff;
-            display: flex;
-            align-items: center;
-        }
+.col1 {
+  padding: 3%;
+  background-color: #eee;
+}
+.col1 div {
+  font-size: 20px;
+  color: #bb0404;
+  margin-bottom: 10px;
+}
+.col1 div::after {
+  display: inline-block;
+  content: "";
+  width: calc(100% - 220px);
+  height: 2px;
+  background-color: #bb0404;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.col1 p {
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+  line-height: 1.5em;
+}
+.col1 p:nth-child(odd)::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.col1 p:nth-child(even) {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+}
 
-        .row2 div:first-child h2 {
-            line-height: 120px;
-            font-size: 40px;
-            font-weight: 400;
-        }
+.wrap > div:nth-child(even) div:first-child {
+  justify-content: end;
+}
+.wrap > div:nth-child(even) div:first-child p {
+  order: 1;
+  margin-left: 0px;
+}
 
-        .row2 div:first-child p {
-            order: -1;
-            font-size: 100px;
-            font-weight: 100;
-            writing-mode: vertical-rl;
-            vertical-align: bottom;
-            margin-left: -10px;
-        }
-
-        .pic {
-            position: relative;
-        }
-
-        .pic img {
-            width: 100%;
-        }
-
-        .pic .btn {
-            width: 15%;
-            height: 20%;
-            background-color: #bb0404;
-            position: absolute;
-            top: 40%;
-            left: 42.5%;
-            border-radius: 20%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pic .btn::after {
-            display: block;
-            content: "";
-            border-top: 2vw solid transparent;
-            border-left: 4vw solid #fff;
-            border-bottom: 2vw solid transparent;
-        }
-
-        .col1 {
-            padding: 3%;
-            background-color: #eee;
-        }
-
-        .col1 div {
-            font-size: 20px;
-            color: #bb0404;
-            margin-bottom: 10px;
-        }
-
-        .col1 div::after {
-            display: inline-block;
-            content: "";
-            width: calc(100% - 220px);
-            height: 2px;
-            background-color: #bb0404;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-
-        .col1 p {
-            margin-bottom: 10px;
-            letter-spacing: 1.2px;
-            line-height: 1.5em;
-        }
-
-        .col1 p:nth-child(odd)::before {
-            content: "";
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            vertical-align: middle;
-            margin-right: 5px;
-            border-radius: 50%;
-            background-color: #000;
-        }
-
-        .col1 p:nth-child(even) {
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 300;
-            padding: 5px;
-            background-color: #000;
-            color: #fff;
-        }
-
-        .wrap>div:nth-child(even) div:first-child {
-            justify-content: end;
-        }
-
-        .wrap>div:nth-child(even) div:first-child p {
-            order: 1;
-            margin-left: 0px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .wrap {
-                max-width: 1450px;
-                padding: 20px;
-                margin: 0 auto;
-                border: 1px solid #000;
-            }
-
-            .wrap div {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .wrap div .row2 {
-                position: relative;
-                z-index: 2;
-                width: 40%;
-            }
-
-            .wrap div .row2 div:first-child {
-                flex-direction: row;
-            }
-
-            .wrap div .pic {
-                top: 120px;
-                position: absolute;
-                left: 17%;
-                width: 66%;
-            }
-
-            .wrap div .pic img {
-                width: 100%;
-            }
-
-            .wrap div .pic .shadow {
-                position: absolute;
-                width: 50%;
-                height: 50%;
-                background-color: #eeeeee;
-                top: -50px;
-                right: -50px;
-                z-index: -1;
-            }
-
-            .wrap div .pic .btn {
-                left: 95%;
-            }
-
-            .wrap div .pic .btn::after {
-                border-top: 1vw solid transparent;
-                border-left: 2vw solid #fff;
-                border-bottom: 1vw solid transparent;
-            }
-
-            .wrap div .col1 {
-                position: relative;
-                z-index: 2;
-                display: block;
-                width: 50%;
-                margin: 10% 5%;
-            }
-
-            .wrap div .col1 div {
-                display: block;
-            }
-
-            .wrap div:nth-child(even) .row2 {
-                align-self: end;
-            }
-
-            .wrap div:nth-child(even) .pic .btn {
-                left: -5%;
-            }
-
-            .wrap div:nth-child(even) .col1 {
-                align-self: end;
-            }
-        }
+@media screen and (min-width: 768px) {
+  .wrap {
+    max-width: 1450px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+  .wrap div {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap div .row2 {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+  }
+  .wrap div .row2 div:first-child {
+    flex-direction: row;
+  }
+  .wrap div .pic {
+    top: 120px;
+    position: absolute;
+    left: 17%;
+    width: 66%;
+  }
+  .wrap div .pic img {
+    width: 100%;
+  }
+  .wrap div .pic .shadow {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #eeeeee;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+  }
+  .wrap div .pic .btn {
+    left: 95%;
+  }
+  .wrap div .pic .btn::after {
+    border-top: 1vw solid transparent;
+    border-left: 2vw solid #fff;
+    border-bottom: 1vw solid transparent;
+  }
+  .wrap div .col1 {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 50%;
+    margin: 10% 5%;
+  }
+  .wrap div .col1 div {
+    display: block;
+  }
+  .wrap div:nth-child(even) .row2 {
+    align-self: end;
+  }
+  .wrap div:nth-child(even) .pic .btn {
+    left: -5%;
+  }
+  .wrap div:nth-child(even) .col1 {
+    align-self: end;
+  }
+}
     </style>
 </head>
 
