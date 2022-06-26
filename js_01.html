@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC&display=swap');
+
+    .wrap {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .wrap .banner {
+      position: relative;
+      width: 100%;
+    }
+
+    .wrap .banner img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .wrap .banner .cover {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .wrap .photo-list {
+      display: flex;
+    }
+
+    .wrap .photo-list .photo {
+      width: 33.333333%;
+    }
+
+    .wrap .photo-list .photo img {
+      width: 100%;
+    }
+    .main{
+      font-family: 'Anek Latin', sans-serif;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="banner">
+      <img src="">
+    </div>
+    <div class="main">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="ph"></div>
+    <div class="photo-list">
+      <div class="photo"><img src=""></div>
+      <div class="photo"><img src=""></div>
+      <div class="photo"><img src=""></div>
+    </div>
+  </div>
+
+
+  <script>
+    const imgurl = [
+      "https://picsum.photos/300/200?random=1",
+      "https://picsum.photos/400/400?random=20",
+      "https://picsum.photos/400/400?random=30",
+      "https://picsum.photos/400/400?random=40"
+    ];
+    var setTxt = [
+      "Name:Kami Liu", "Gender:Female", "School:", "Mail:xx00@gmail.com"
+    ];
+    let oimg = document.querySelectorAll("img");
+    let txt = document.querySelectorAll("p");
+    for (i = 0; i < imgurl.length; i++) {
+      oimg[i].setAttribute('src', imgurl[i]);
+    }
+    for (j = 0; j < setTxt.length; j++) {
+      txt[j].innerHTML = setTxt[j];
+    }
+  </script>
+</body>
+
+</html>
