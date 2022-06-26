@@ -1,0 +1,202 @@
+$green: #3F5D45;
+$dark-green: #2C4832;
+$light-green: #EAF0ED;
+$yellow: #ffa180;
+
+
+body {
+    font-family: PingFangSC-Regular, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+    color: $dark-green;
+}
+
+img {
+    box-sizing: border-box;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 42px 30px;
+
+    .header {
+        ul {
+            align-items: center;
+            margin-bottom: 30px;
+
+            li+li {
+                margin-left: 60px;
+            }
+
+            a {
+                box-sizing: border-box;
+                padding: 8px 0 10px;
+
+                &:hover {
+                    border-bottom: 1px solid $dark-green;
+                }
+            }
+        }
+    }
+
+    .banner {
+        margin-bottom: 60px;
+    }
+
+    .main {
+        .menu {
+            width: 300px;
+            height: 300px;
+
+            h3,
+            li {
+                height: 20%;
+            }
+
+            h3,
+            a {
+                text-align: center;
+                font-size: 24px;
+                line-height: 60px;
+                vertical-align: center;
+            }
+
+            h3 {
+                background-color: $dark-green;
+                color: #fff;
+            }
+
+            li>a {
+                color: $dark-green;
+            }
+
+            li:first-of-type,
+            li:hover {
+                background-color: $light-green;
+            }
+        }
+
+        .product-list {
+            width: 620px;
+
+            .product {
+                width: 300px;
+                text-align: center;
+                position: relative;
+                margin-bottom: 20px;
+
+                div:not(:first-child) {
+                    width: 100%;
+                }
+
+                div:first-child {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 20px;
+                    writing-mode: vertical-lr;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 10px;
+                    background-color: $dark-green;
+                    color: #fff;
+                }
+
+                .even {
+                    &>* {
+                        width: 50%;
+                        line-height: 56px;
+                        box-sizing: border-box;
+                        border: 1px solid $light-green;
+                        font-size: 20px;
+                        color: $dark-green;
+                    }
+                }
+
+                div:last-child {
+                    font: 24px;
+                    line-height: 65px;
+                    color: $dark-green;
+                    background-color: $light-green;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $dark-green;
+                    }
+                }
+
+                a {
+                    width: 100%;
+                    position: relative;
+                }
+
+                a::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("https://hexschool.github.io/webLayoutTraining1st/student-week1/favorite_border.png");
+                    top: 20px;
+                    right: 22px;
+                    z-index: 3;
+                }
+
+                a:hover::before {
+                    content: "";
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .page-swift {
+        justify-content: end;
+
+        li {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+
+            a {
+                line-height: 60px;
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+            }
+            a:hover,
+            a.active {
+                background-color: $yellow;
+                color: #fff;
+            }
+
+
+
+
+        }
+    }
+}

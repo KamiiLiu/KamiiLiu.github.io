@@ -1,0 +1,205 @@
+
+@import url(//db.onlinewebfonts.com/c/214350dbc23e3237aca81ef0e5033dd6?family=PingFang+SC);
+
+$black: #415165;
+$red: #a00404;
+$gray: #96a9c4;
+$reg: "PingFangTC-Regular, sans-serif";
+//font-family: PingFangTC-Ultralight, sans-serif;
+$light: "font-family: PingFangTC-Light, sans-serif";
+//font-family: PingFangTC-Thin, sans-serif;
+$med: "font-family: PingFangTC-Medium, sans-serif";
+//font-family: PingFangTC-Semibold, sans-serif;
+
+body{
+    font-family: PingFangSC-Regular, sans-serif;
+}
+p {
+    font-family: $light;
+    font-size: 24px;
+    line-height: 1.5em;
+    color: #000;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 45px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #000;
+    small {
+        padding-left: 16px;
+        font-size: 24px;
+        line-height: 29px;
+        color: $red;
+    }
+}
+
+h3 {
+    font-family: PingFangSC-Medium, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    &:hover p{
+        color: lighten($red,50%);
+}
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+.photo{
+    margin: 48px 0;
+    width: 324px;
+    height: 324px;
+    border-radius: 50%;
+    background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week1/photo.png?raw=true");
+}
+
+.bg-black {
+    background-color: $black;
+
+    * {
+        color: #fff;
+        text-align: center;
+        font-family: $reg;
+        font-size: 24px;
+        line-height: 1.5em;
+    }
+}
+
+.wrap {
+    margin: 0 auto;
+    width: 1920px;
+    box-sizing: border-box;
+    border: 1px solid $gray;
+    .main {
+        .text-box{
+            margin-bottom: 72px;
+        }
+        margin: 40px 360px 0;
+        h1{
+            font-size: 80px;
+            line-height: 95px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #000;
+        }
+        .self,
+        .edu{
+            p:first-of-type{
+                margin-top: 16px;
+            }
+            p + p{
+                margin-top: 24px;
+            }
+        }
+        .skill{
+            padding: 24px 102px 54px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 80px;
+            h2{
+                align-self: stretch;
+                border-bottom: 1px solid #fff;
+            }
+            ul{
+                margin-top: 40px;
+                padding-left: 24px;
+                margin-left: -24px;
+                border-left: 1px solid #fff;
+                li{
+                   margin-bottom: 20px; 
+                }
+            }
+        }
+        .work {
+            ul {
+                margin-top: 16px;
+                margin-left: 48px;
+                border-left: 1px solid $gray;
+                padding-left: 24px;              li + li{
+                    margin-top: 32px;
+                }
+                li>p {
+                    font-family: $light;
+                    width: 642px;
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+                img{
+                    margin: 8px 0;
+                }
+                img:first-of-type{
+                    width: 90px;
+                }
+                img:last-of-type{
+                    width: 72px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+
+        .up-footer {
+            margin: 24px 0 8px;
+            span:first-child {
+                font-size: 32px;
+                line-height: 45px;
+            }
+            span:last-child {
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+        .main-footer {
+            border-top: 1px solid #fff;
+            margin: 32px 360px 48px;
+            padding-top: 32px;
+            p {
+                margin-bottom: 16px;
+            }
+            a:last-of-type>p {
+                margin-bottom: 48px;
+            }
+            .min-list {
+                margin-top: 48px;
+                width: 192px;
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                li {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 20%;
+                }
+                a:hover li{
+                    background-color: lighten($red,50%);
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

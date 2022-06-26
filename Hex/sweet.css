@@ -1,0 +1,203 @@
+body {
+  font-family: PingFangSC-Regular, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+  color: #2C4832;
+}
+
+img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 42px 30px;
+}
+
+.wrap .header ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.wrap .header ul li + li {
+  margin-left: 60px;
+}
+
+.wrap .header ul a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 0 10px;
+}
+
+.wrap .header ul a:hover {
+  border-bottom: 1px solid #2C4832;
+}
+
+.wrap .banner {
+  margin-bottom: 60px;
+}
+
+.wrap .main .menu {
+  width: 300px;
+  height: 300px;
+}
+
+.wrap .main .menu h3,
+.wrap .main .menu li {
+  height: 20%;
+}
+
+.wrap .main .menu h3,
+.wrap .main .menu a {
+  text-align: center;
+  font-size: 24px;
+  line-height: 60px;
+  vertical-align: center;
+}
+
+.wrap .main .menu h3 {
+  background-color: #2C4832;
+  color: #fff;
+}
+
+.wrap .main .menu li > a {
+  color: #2C4832;
+}
+
+.wrap .main .menu li:first-of-type,
+.wrap .main .menu li:hover {
+  background-color: #EAF0ED;
+}
+
+.wrap .main .product-list {
+  width: 620px;
+}
+
+.wrap .main .product-list .product {
+  width: 300px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.wrap .main .product-list .product div:not(:first-child) {
+  width: 100%;
+}
+
+.wrap .main .product-list .product div:first-child {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 20px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+  background-color: #2C4832;
+  color: #fff;
+}
+
+.wrap .main .product-list .product .even > * {
+  width: 50%;
+  line-height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #EAF0ED;
+  font-size: 20px;
+  color: #2C4832;
+}
+
+.wrap .main .product-list .product div:last-child {
+  font: 24px;
+  line-height: 65px;
+  color: #2C4832;
+  background-color: #EAF0ED;
+}
+
+.wrap .main .product-list .product div:last-child:hover {
+  color: #fff;
+  background-color: #2C4832;
+}
+
+.wrap .main .product-list .product a {
+  width: 100%;
+  position: relative;
+}
+
+.wrap .main .product-list .product a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/student-week1/favorite_border.png");
+  top: 20px;
+  right: 22px;
+  z-index: 3;
+}
+
+.wrap .main .product-list .product a:hover::before {
+  content: "";
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap .page-swift {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.wrap .page-swift li {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.wrap .page-swift li a {
+  line-height: 60px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.wrap .page-swift li a:hover,
+.wrap .page-swift li a.active {
+  background-color: #ffa180;
+  color: #fff;
+}
+/*# sourceMappingURL=sweet.css.map */

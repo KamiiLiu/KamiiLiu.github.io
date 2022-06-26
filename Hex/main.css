@@ -1,0 +1,226 @@
+@import url(//db.onlinewebfonts.com/c/214350dbc23e3237aca81ef0e5033dd6?family=PingFang+SC);
+body {
+  font-family: PingFangSC-Regular, sans-serif;
+}
+
+p {
+  font-family: "font-family: PingFangTC-Light, sans-serif";
+  font-size: 24px;
+  line-height: 1.5em;
+  color: #000;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 45px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #000;
+}
+
+h2 small {
+  padding-left: 16px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #a00404;
+}
+
+h3 {
+  font-family: PingFangSC-Medium, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a:hover p {
+  color: #fda6a6;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.photo {
+  margin: 48px 0;
+  width: 324px;
+  height: 324px;
+  border-radius: 50%;
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week1/photo.png?raw=true");
+}
+
+.bg-black {
+  background-color: #415165;
+}
+
+.bg-black * {
+  color: #fff;
+  text-align: center;
+  font-family: "PingFangTC-Regular, sans-serif";
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1920px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #96a9c4;
+}
+
+.wrap .main {
+  margin: 40px 360px 0;
+}
+
+.wrap .main .text-box {
+  margin-bottom: 72px;
+}
+
+.wrap .main h1 {
+  font-size: 80px;
+  line-height: 95px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #000;
+}
+
+.wrap .main .self p:first-of-type,
+.wrap .main .edu p:first-of-type {
+  margin-top: 16px;
+}
+
+.wrap .main .self p + p,
+.wrap .main .edu p + p {
+  margin-top: 24px;
+}
+
+.wrap .main .skill {
+  padding: 24px 102px 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.wrap .main .skill h2 {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-bottom: 1px solid #fff;
+}
+
+.wrap .main .skill ul {
+  margin-top: 40px;
+  padding-left: 24px;
+  margin-left: -24px;
+  border-left: 1px solid #fff;
+}
+
+.wrap .main .skill ul li {
+  margin-bottom: 20px;
+}
+
+.wrap .main .work ul {
+  margin-top: 16px;
+  margin-left: 48px;
+  border-left: 1px solid #96a9c4;
+  padding-left: 24px;
+}
+
+.wrap .main .work ul li + li {
+  margin-top: 32px;
+}
+
+.wrap .main .work ul li > p {
+  font-family: "font-family: PingFangTC-Light, sans-serif";
+  width: 642px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.wrap .main .work ul img {
+  margin: 8px 0;
+}
+
+.wrap .main .work ul img:first-of-type {
+  width: 90px;
+}
+
+.wrap .main .work ul img:last-of-type {
+  width: 72px;
+}
+
+.wrap .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap .footer .up-footer {
+  margin: 24px 0 8px;
+}
+
+.wrap .footer .up-footer span:first-child {
+  font-size: 32px;
+  line-height: 45px;
+}
+
+.wrap .footer .up-footer span:last-child {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.wrap .footer .main-footer {
+  border-top: 1px solid #fff;
+  margin: 32px 360px 48px;
+  padding-top: 32px;
+}
+
+.wrap .footer .main-footer p {
+  margin-bottom: 16px;
+}
+
+.wrap .footer .main-footer a:last-of-type > p {
+  margin-bottom: 48px;
+}
+
+.wrap .footer .main-footer .min-list {
+  margin-top: 48px;
+  width: 192px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.wrap .footer .main-footer .min-list li {
+  width: 48px;
+  height: 48px;
+  border-radius: 20%;
+}
+
+.wrap .footer .main-footer .min-list a:hover li {
+  background-color: #fda6a6;
+}
+/*# sourceMappingURL=main.css.map */
