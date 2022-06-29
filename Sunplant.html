@@ -6,22 +6,168 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="Sunplant.css">
+    
     <title>Document</title>
 </head>
 
 <body>
     <div class="wrap">
         <div class="header col">
-            <ul class="col">
-                <li><a href="javascript:void(0)">Home</a></li>
-                <li><a href="javascript:void(0)">Shop</a></li>
-                <li><a href="javascript:void(0)">Featured</a></li>
-                <li><a href="javascript:void(0)">Pages</a></li>
-                <li><a href="javascript:void(0)">Element</a></li>
+                <div class="menu-switch">
+                    <label for="menu-switch" class="switch-line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <input type="checkbox" name="" id="menu-switch">
+            <ul class="lv1 col menu-switch">
+                <li class="nav-item">
+                    <a href="#">Home</a>
+                    <div class="lv2-gruop">
+                        <ul class="lv2 col">
+                            <li>
+                                <a href="#">Home1</a>
+                                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/1.jpg?v=1585564604"></a>
+                            </li>
+                            <li>
+                                <a href="#">Home2</a>
+                                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/1.jpg?v=1585564604"></a>
+    
+                            </li>
+                            <li>
+                                <a href="#">Home3</a>
+                                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/1.jpg?v=1585564604"></a>
+    
+                            </li>
+                            <li>
+                                <a href="#">Home4</a>
+                                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/1.jpg?v=1585564604"></a>
+    
+                            </li>
+                            <li>
+                                <a href="#">Home5</a>
+                                <a href="#"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/1.jpg?v=1585564604"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Shop</a>
+                    <div class="lv2-gruop">
+                        <ul class="lv2 row">
+                            <a href="#">SHOP FILTER</a>
+                            <li><a href="#">Filter Push Left</a></li>
+                            <li><a href="#">Filter Colappse</a></li>
+                        </ul>
+                        <ul class="lv2 row">
+                            <a href="#">SHOP LAYOUT</a>
+                            <li><a href="#">Full Left</a></li>
+                            <li><a href="#">Sidebar Left</a></li>
+                            <li><a href="#">Sidebar Right</a></li>
+                            <li><a href="#">Infinity Scrol</a></li>
+                            <li><a href="#">Product List</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Featured</a>
+                    <div class="lv2-gruop">
+                        <ul class="lv2 row">
+                            <a href="#">BLOG LAYOUTS</a>
+                            <li>
+                                <a href="#">Blog Standar No Sidebar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Blog Standar Sidebar Left
+                                </a>
+                            </li>
+                            <li><a href="#">Blog Standar Sidebar Right</a></li>
+                            <li>
+                                <a href="#">Blog Grid No Sidebar
+                                </a>
+                            </li>
+                            <li><a href="#">Blog Grid Sidebar</a></li>
+                        </ul>
+                        <ul class="lv2 row">
+                            <a href="#">PRODUCT LAYOUT</a>
+                            
+                            <li>
+                                <a href="#">Product Large Images
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Product Extended
+                                </a>
+                            </li>
+                            <li><a href="#">Product Gallery</a></li>
+                            <li><a href="#">Product Sticky</a></li>
+                            <li><a href="#">Product Sidebar</a></li>
+                        </ul>
+                        <ul class="lv2">
+                            <a href="#">PRODUCT TYPES</a>
+                            <li>
+                                <a href="#">Variable
+                                </a>
+                            </li>
+                            <li><a href="#">Video</a></li>
+                            <li><a href="#">360 Degree</a></li>
+                            <li><a href="#">Affiliate</a></li>
+                            <li>
+                                <a href="#">Simple
+                                </a>
+                            </li>
+                            <li><a href="#">Out Of Stock</a></li>
+                        </ul>
+                        <ul class="lv2">
+                            <a href="#">SINGLE POST</a>
+                            <span></span>
+                            <li><a href="#">Single Post No Sidebar</a></li>
+                            <li><a href="#">Single Post Sidebar Right</a></li>
+                            <li><a href="#">Single Post Sidebar Left</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Pages</a>
+                    <div class="lv2-gruop">
+                        <ul class="lv2 row">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Element</a>
+                    <div class="lv2-gruop">
+                        <ul class="lv2">
+                            <a href="#">MAIN STYLE</a>
+                            <li><a href="#">No Sidebar</a></li>
+                            <li><a href="#">Default</a></li>
+                            <li><a href="#">Minimal</a></li>
+                            <li><a href="#">Classic</a></li>
+                            <li><a href="#">Mordern</a></li>
+                        </ul>
+                        <ul class="lv2">
+                            <a href="#">POST FOMAT</a>
+                            <li><a href="#">Elementor</a></li>
+                            <li><a href="#">Logo on menu</a></li>
+                            <li><a href="#">Default</a></li>
+                            <li><a href="#">Logo in menu</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
             <div class="logo"><a href="javascript:void(0)"><img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/files/logo.png?v=1585540695" alt=""></a></div>
-            <ul class="l-icon"></ul>
+            <ul class="l-icon">
+                    <i class="fa-solid aaa fa-magnifying-glass"></i>
+                    <i class="fa-regular aaa fa-circle-user"></i>
+                    <i class="fa-solid aaa fa-bag-shopping"></i>
+            </ul>
         </div>
         <div class="cover col">
             <div class="txt">
@@ -80,7 +226,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/187-large_default.jpg?v=1585273742"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -91,7 +241,11 @@
                 <p>SALE</p>
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/6.jpg?v=1585534424" alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -103,7 +257,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/191-large_default_bdf68ca7-5284-412c-9fec-78235d9cd046.jpg?v=1585273709"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -114,7 +272,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/157-large_default.jpg?v=1585273757"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -125,7 +287,11 @@
                 <p>SALE</p>
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/3.jpg?v=1585533927" alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -136,7 +302,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/215-large_default.jpg?v=1585273720"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Sapien Libero</h3>
@@ -148,7 +318,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/163-large_default.jpg?v=1585273753"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Purple Flowers</h3>
@@ -160,7 +334,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/169-large_default.jpg?v=1585273748"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Plant</h3>
@@ -171,7 +349,11 @@
                 <a class="mask" href="javascript:void(0)">
                     <img src="https://cdn.shopify.com/s/files/1/0356/8343/4555/products/172-large_default.jpg?v=1585273745"
                         alt="">
-                    <div class="l-icon"></div>
+                    <div class="l-icon">
+                        <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </a>
                 <a href="javascript:void(0)">
                     <h3>Plant Beautiful</h3>
@@ -212,11 +394,19 @@
                 <li><a href="javascript:void(0)">CUSTOMER SERVICE</a></li>
                 <li><a href="javascript:void(0)">SUBSCRIPTION</a></li>
             </ul>
-            <ul class="icon-list col m-row">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <ul class="icon-list col">
+                <li>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-basketball"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
             </ul>
             <p>Website by ShopiLaunch . Copyright SunplantShop</p>
         </div>
