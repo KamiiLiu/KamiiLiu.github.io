@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400&family=Mingzat&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC&display=swap');
+
+        * {
+            font-size: 20px;
+            letter-spacing: 4px;
+            font-family: 'Mingzat', sans-serif;
+
+        }
+
+        .wrap {
+            margin: 0 auto;
+        }
+
+        .guess-box>button {
+            background-color: #E2DE9C;
+            border: none;
+            border-bottom: 2px solid #9C9856;
+            color: #4C4806;
+        }
+
+        .guess-box>button+button {
+            border-left: 4px solid #9C9856;
+        }
+
+        .col-lg-3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-lg-3>* {
+            width: 33.333333333%;
+        }
+
+        .answerbox {
+            display: flex;
+            padding: 5px;
+            background-color:rgba(135, 206, 202 ,0.3);
+            align-items: center;
+            border-bottom: 3px solid #596A7B;
+        }
+
+        .answerbox>span {
+            display: block;
+            color: #6A79B0;
+            border-radius: 10%;
+            letter-spacing: 2px;
+            padding: 10px;
+            background-color: #CEDDFF;
+        }
+
+        .answerbox>div {
+            padding: 0 0 0 30px;
+            text-align: start;
+            color: #4C4806;
+            flex-grow: 1;
+            font-size: 30px;
+        }
+
+        .guessbox {
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .guessbox>input {
+            flex-grow: 1;
+            border: 3px solid #B0AC6A;
+            color: #6A6624;
+
+        }
+
+        .guessbox button {
+            border: none;
+            background-color: #B0AC6A;
+            padding: 10px 50px;
+            color: #fff;
+        }
+
+        .guessbox button:hover {
+            background-color: #6A6DB0;
+        }
+
+        .guess-box button:hover {
+            background-color: #9DA0E3;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-12>* {
+                width: 100%;
+            }
+
+            .guess-box>button+button {
+                border-left: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="guess-box col-lg-3 col-12">
+            <button>START</button><button>RESTART</button><button>ANSWER</button>
+        </div>
+
+        <div class="content"></div>
+
+        <div class="guessbox">
+            <input id="abc" type="text"><button id="guess">Guess</button>
+        </div>
+    </div>
+    <script>
+
+
+        let guess_input = document.querySelector("input");
+        let content = document.querySelector(".content");
+        let start_btn = document.querySelectorAll("button")[0];
+        let restart_btn = document.querySelectorAll("button")[1];
+        let answer_btn = document.querySelectorAll("button")[2];
+        let guess_btn = document.querySelectorAll("button")[3];
+        guess_btn.setAttribute("disabled", "disabled");
+        restart_btn.setAttribute("disabled", "disabled");
+        answer_btn.setAttribute("disabled", "disabled");
+        guess_input.setAttribute("disabled", "disabled");
+        let ansArray
+        let userG=[]
+        start_btn.onclick = () => {
+            ansArray = creatAns();
+            guess_btn.removeAttribute("disabled");
+            answer_btn.removeAttribute("disabled");
+            restart_btn.removeAttribute("disabled");
+            guess_input.removeAttribute("disabled");
+            start_btn.setAttribute("disabled", "disabled");
+        };
+        restart_btn.onclick = () => {
+            ansArray = creatAns();
+            guess_btn.removeAttribute("disabled");
+            guess_input.removeAttribute("disabled");
+            content.innerHTML = "";
+        };
+        answer_btn.onclick = () => {
+            alert(ansArray.join(""));
+        };
+        guess_btn.onclick = () => {
+            userG=("" + guess_input.value).split("");
+            if(userG.length==4 && typeof(+guess_input.value)=="number"){
+            let answerbox = document.createElement("div");
+            let answer = document.createElement("div");
+            answer.innerText = guess_input.value;
+            let compareback = compare(guess_input.value);
+            let tag = document.createElement("span");
+            tag.innerText = `${compareback[0]}A${compareback[1]}B`;
+            content.append(answerbox);
+            answerbox.append(tag);
+            answerbox.append(answer);
+            answerbox.setAttribute("class", "answerbox");
+            GoodGame(compareback);
+        }};
+        function creatAns() {
+            let ansArray = [];
+            do {
+                let num = Math.floor(Math.random() * 10);
+                if (ansArray.find(x => x == num) == undefined) {
+                    ansArray.push(num);
+                }
+            } while (ansArray.length < 4);
+            return ansArray;
+
+        }
+        function compare(userGuess) {
+            let i = 0;
+            let a = 0;
+            let b = 0;
+            let userG = ("" + userGuess).split("");
+            userG.forEach((item, index) => {
+                if (item == ansArray[i]) {
+                    a++;
+                } else if (ansArray.find((x) => x == item) != undefined) {
+                    b++;
+                }
+                i++;
+            });
+            return [a, b];
+        }
+        function GoodGame(a4) {
+            if(a4[0]==4){
+            guess_input.setAttribute("disabled", "disabled");
+            guess_btn.setAttribute("disabled", "disabled");     
+            alert(`沒錯！答案是${ansArray.join("")}`);
+        }
+        }
+    </script>
+</body>
+
+</html>
