@@ -1,0 +1,18 @@
+
+修改::placeholder的方法
+[type=text]::placeholder{
+    color: $dark-rose;
+}
+
+button是inline，所以父層要設定font-size: 0;
+麵包屑可以用<i>製作，但<i>使用者摸得到
+
+麵包屑最後一層可以用沒有超連結的a標籤
+```html=
+<a href="javascript:;">首頁</a>
+<a href="javascript:;">生活用品</a>
+<a href="javascript:;">電子產品</a> 
+<a>我是當前位置</a>  
+```
+                
+<i><a><button>都是行內元素，所以父層要設定font-size: 0;
