@@ -177,7 +177,7 @@
         };
         guess_btn.onclick = () => {
             userG = ("" + guess_input.value).split("");
-            if (userG.length == 4 && typeof (+guess_input.value) == "number") {
+            if (userG.length == 4 && typeof (+guess_input.value) == "int") {
                 let answerbox = document.createElement("div");
                 let answer = document.createElement("div");
                 answer.innerText = guess_input.value;
