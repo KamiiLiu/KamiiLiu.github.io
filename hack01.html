@@ -128,7 +128,7 @@
         <div class="content"></div>
 
         <div class="guessbox">
-            <input id="abc" type="text"><button id="guess">Guess</button>
+            <input id="abc" type="number"><button id="guess">Guess</button>
         </div>
     </div>
     <script>
@@ -177,7 +177,7 @@
         };
         guess_btn.onclick = () => {
             userG = ("" + guess_input.value).split("");
-            if (userG.length == 4 && typeof (+guess_input.value) == "int") {
+            if (userG.length == 4) {
                 let answerbox = document.createElement("div");
                 let answer = document.createElement("div");
                 answer.innerText = guess_input.value;
