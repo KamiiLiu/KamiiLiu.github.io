@@ -111,7 +111,14 @@
             .col-12>* {
                 width: 100%;
             }
-
+            .guessbox{
+                display: block;
+            }
+            .guessbox>button,
+            .guessbox>input{
+                padding: 10px 0;
+                    width: 100%;
+                }
             .guess-box>button+button {
                 border-left: none;
             }
@@ -128,7 +135,8 @@
         <div class="content"></div>
 
         <div class="guessbox">
-            <input id="abc" type="number" placeholder="按下開始後，請輸入不重複四位數"><button id="guess">Guess</button>
+            <input id="abc" type="number" placeholder="按下開始後，請輸入不重複四位數">
+            <button id="guess">Guess</button>
         </div>
     </div>
     <script>
