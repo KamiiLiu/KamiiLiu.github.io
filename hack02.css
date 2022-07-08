@@ -55,6 +55,10 @@ button {
 }
 
 .answer-box {
+  background-image: url(./anya.jpg);
+  background-position: 35%;
+  height: 120px;
+  background-repeat: no-repeat;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
