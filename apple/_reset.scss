@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5,h6,p,span,a{
+    font-family: 'Noto Serif TC', serif;
+}
+img{
+    vertical-align: top;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #b3aeae;
+    display: block;
+}
+h5,i{
+    color: #b6b3b3;
+    font-size: 18px;
+}
+button{
+    border: none;
+}
+.col-lg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
