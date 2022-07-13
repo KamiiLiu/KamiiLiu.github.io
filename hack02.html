@@ -55,7 +55,7 @@
             alert(ans);
         }
         function inputAns(ans){
-            if(user.innerText=="抒心抒懷抒山曉???"||user.innerText=="Start"){
+            if(user.innerText=="安妮雅不喜歡這個答案"||user.innerText=="Start"){
                 user.style.color="#a77b7b";
                 user.innerText="";
             }
@@ -106,8 +106,8 @@
             creatAns();
         }
         function judge(userAns){
-            if(user.innerText=="Start"||user.innerText=="抒心抒懷抒山曉???" || userAns>max.innerText || userAns<min.innerText ||userAns == min.innerText || userAns == max.innerText){
-                user.innerText ="抒心抒懷抒山曉???";
+            if(user.innerText=="Start"||user.innerText=="安妮雅不喜歡這個答案" || userAns>max.innerText || userAns<min.innerText ||userAns == min.innerText || userAns == max.innerText){
+                user.innerText ="安妮雅不喜歡這個答案";
                 user.style.color="#a77b7b";
             }
             else if(userAns<ans){
