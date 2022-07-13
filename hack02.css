@@ -4,7 +4,10 @@
   line-height: 1.5em;
   font-weight: 900;
 }
-
+.wrap{
+  margin: 0 auto;
+  max-width: 1000px;
+}
 button {
   font-size: 20px;
   border: 1px solid #a77b7b;
@@ -69,5 +72,9 @@ button {
 
 .answer-box div:first-child {
   font-weight: 900;
+}
+.wrap{
+  margin: 0 auto;
+  max-width: 1000px;
 }
 /*# sourceMappingURL=hack02.css.map */
