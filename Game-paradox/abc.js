@@ -1,0 +1,10 @@
+let Cars = ['BMW', 'Benz', 'Audi', 'Lexus'];
+let car = Cars.find( c => c=='Benz');
+console.log(car);
+let index = Cars.indexOf('Audi');
+console.log(index);
+let idx = Cars.findIndex(c=>c=="Benz");
+console.log(idx);
+let Prices = [280, 320, 250, 210];
+console.log(Prices.findIndex(p => p > 300));
+console.log(Prices.filter(p => p >  250));
