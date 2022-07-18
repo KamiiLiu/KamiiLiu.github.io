@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<!-- 待辦清單 -->
+<!--上傳前刪除不必要的字體-->
+
+<body>
+    <div class="wrap dayMode">
+        <div class="wrap-cover dayMode row">
+            <div class="header">
+                <h1>卡蜜ㄦの貴婦生活</h1>
+                <p>Vive la Vie！30歲後の質感な生活</p>
+            </div>
+            <div class="content-wrap col-sb">
+                <div class="main-card dayMode row">
+                    <div class="year-wrap dayMode col-sb">
+                        <div id="last" class="last col-sb">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                        <h2 id="year-pick">2022</h2>
+                        <div id="next" class="next col-sb">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div  class="month col-sb">
+                        <div id="last" class="last col-sb">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                        <h2 id="month-pick"></h2>
+                        <div id="next" class="last col-sb">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                    </div>
+                    <div >
+                        <div class="day dayMode weektitle">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thur</div>
+                        <div>Fri</div>
+                        <div>Sat</div></div>
+                        <div class="day days daymode"></div>
+                    </div>
+                    <div class="btn-box col-sb">
+                        <i class="fa-solid fa-eye active-eye"></i>
+                        <div class="btn-arr">
+                            <button></button>
+                            <div class="ball"></div>
+                        </div>
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </div>
+                </div>
+                <div class="main-menu">
+                    <div class="date-show col-sb">
+                        <div class="day"></div>
+                        <div class="year-month"></div>
+                        <div></div>
+                    </div>
+                    <dl class="col-sb to-do-list">
+                    </dl>
+                    <div class="col-sb inputxt">
+                    <p>心情筆記</p>
+                    <input type="text" id="diary">
+                </div>
+                    <div class="btn-list">
+                        <button id="submitBtn">Submit</button>
+                        <button id="cancelBtn">Cancel</button>
+                        <button id="deletelBtn">Delete</button>
+                    </div>
+                    <div class="note">
+                        <p>A:欸，你資料結構這麼少，是不是不懂Coding</p>
+                        <p>B:我看你才是不懂優雅貴婦Living</p>
+                    </div>     
+                </div>
+                <div class="schedule-card sun">
+                    <h3>我是個好人</h3>
+                    <div class="content">
+                    </div>
+                </div>
+                <div class="schedule-card night">
+                    <h3>也是個壞人</h3>
+                    <div class="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./calender.js"></script>
+</body>
+
+</html>
