@@ -1,0 +1,384 @@
+@import "reset";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+//標題區
+.header { 
+    padding: 5px 0px;
+    width: 40%;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.5em;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+//整體背景區
+.wrap {
+    border-radius: 40px;
+    position: relative;
+    max-width: 1000px;
+    height: 90%;
+    margin: 15px auto;
+    background-image: url(./pic/001.jpg);
+}
+
+.wrap-cover {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.wrap-cover.dayMode{
+    transition: 3s;
+    background-color: rgba(238, 226, 215,0.3);
+}
+.wrap-cover.nightMode{
+    background-color:rgba($color: #000000, $alpha: 0.3);
+}
+.wrap::after {
+    content: "";
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    background-color: $dark-gray;
+    z-index: -1;
+}
+
+//主要排版區
+.content-wrap {
+    padding: 1% 5%;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+    width: 85%;
+    height: 65%;
+    border: 1px solid $light-brown;
+    background-color: rgba(238, 226, 215,0.4);
+    
+}
+.wrap-cover.dayMode{
+    transition: 3s;
+    box-shadow: 5px 5px 15px #ebcac0;
+}
+.wrap-cover.nightMode{
+    box-shadow: 5px 5px 15px $dark-brawn;
+}
+.main-card {
+    //display: none;
+    cursor: pointer;
+    align-items: stretch;
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    height: 110%;
+    transition: left 2s;
+    top: -5%;
+    left: 45%;
+    padding: 2%;
+}
+.main-card.dayMode{
+    background-color: lighten($gray-pink,0.5);
+    border: 2px solid darken($middle-brown, 10%);
+}
+.main-card.nightMode{
+    background-color: $dark-gray;
+    border: 2px solid darken($light-brown, 10%);
+}
+//年月日
+.year-wrap{
+    align-items: center;
+    align-self: center;
+    h2{
+        padding: 0 50px;
+    }
+    div{
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        background-color:$gray-purple;
+        transition: 0.5s;
+    }
+}
+.year-wrap.dayMode{
+    div:hover{
+        background-color:darken($gray-purple,40%);
+    }
+}
+.year-wrap.nightMode{
+    div:hover{
+        color: $dark-brawn;
+        background-color: $light-brown;
+    }
+}
+.month{
+    padding: 5px 0;
+    justify-content: center;
+    >div{
+        padding: 0 10px;
+    }
+}
+.day{
+    line-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    &>div{
+        width: calc(100% / 7);
+        height: 30px;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+    }
+}
+.day.dayMode{
+    >div{
+        background-color:$gray-purple;
+    }
+}
+.day.nightMode{
+    >div{
+        background-color:$gray-purple;
+    }
+}
+.days.daymode{
+    .dds:hover{
+        background-color: $light-skin;
+    }
+}
+.days.nightMode{
+    .dds:hover{
+        color: $dark-brawn;
+        background-color: $light-brown;
+    }
+}
+.main-menu {
+    opacity: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2%;
+    transition: 2s;
+    position: absolute;
+    width: 45%;
+    height: 110%;
+    background-color: darken($light-brown, 5%);
+    top: -5%;
+    left: 0%;
+    .to-do-list{
+        margin-bottom: 10px;
+        dt{
+            width: 30%;
+        }
+        dd{
+            width: 20%;
+            padding: 5px 0;
+            border: 1px solid $dark-brawn;
+        }
+        dd:hover{
+            background-color: $middle-brown;
+        color:$gray-pink;
+        }
+
+    }
+    .inputxt{
+        p{
+            width: 30%;
+        }
+        input{
+            width: 70%;
+        }
+    }
+    .btn-list{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: end;
+    }
+    button{
+        background-color:$gray-pink;
+        border: 1px solid $gray-brown;
+        padding: 5px 10px;
+        font-family: min02;
+        color:$dark-brawn;
+        font-size: 14px;
+    }
+    button:hover{
+        background-color: $gray-purple;
+    }
+    .note>p{
+        text-align: start;
+        color:$dark-brawn;
+    }
+}
+
+.date-show{
+    margin-bottom: 30px;
+    .day{
+        display: inline-block;
+        width: 50px;
+        font-size: 20px;
+        box-sizing: border-box;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid $gray-purple;
+        background-color: $middle-brown;
+        color:lighten($gray-pink,10%);
+        
+    }
+    .year-month{
+        line-height: 50px;
+    }
+}
+.date-show>div:last-child{
+    color: $middle-brown;
+}
+.btn-box {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 12px;
+    color: $gray-pink;
+    width: 20%;
+    padding: 5px 5px;
+    border-radius: 20px;
+    align-self: end;
+    background-color: darken($gray-purple, 10%);
+
+    .btn-arr {
+        width: 50%;
+        position: relative;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-brawn;
+    }
+
+    .ball {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 20%;
+        height: 70%;
+        border-radius: 50%;
+        background-color: $light-skin;
+        transition: 0.5s;
+    }
+
+}
+
+//所有的hover
+.schedule-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+    .content{
+        width: 80%;
+        border-radius: 10px;
+        overflow: scroll;
+    }
+    .msg{
+        justify-content: start;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 5px;
+        width: 90%;
+    }
+    .msg-day{
+        font-size: 50px;
+        width: 30%;
+    }
+    .switch{
+        width: 80%;
+        border: 1px solid #000;
+        height: 10%; 
+    }
+    .msgtextbox{
+      justify-content: start;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+    .tag-box{
+       padding: 0 5px;
+    }
+    p{
+        padding: 2px 2px;
+        text-align: start;
+        font-size: 14px;
+    }
+}
+.sun{
+    align-items: start;
+    .msg{
+        border-radius: 5px;
+        border: 2px solid lighten($gray-pink,10%);
+        background-color:lighten($gray-pink,10%);
+    }
+    .msg-day{
+        background-color: $gray-brown;
+    }
+    .tag-box{
+        color: darken($gray-pink,20%);
+    }
+    p{
+        color: $gray-brown;
+    }
+}
+.night{
+    align-items: end;
+    .msg{
+        border-radius: 5px;
+        border: 2px solid $gray-pink;
+        background-color:lighten($gray-pink,10%);
+    }
+    .msg-day{
+        background-color: $middle-brown;
+    }
+    .tag-box{
+        color: darken($gray-pink,20%);
+    }
+    p{
+        color: $middle-brown;
+    }
+}
+@media (max-width:768px) {
+    .content-wrap {
+        width: 100%;
+        display: block;
+    }
+
+    .wrap::after {
+        display: none;
+    }
+
+    .header {
+        width: 80%;
+    }
+
+    .main-menu {
+        width: 100%;
+        position: static;
+    }
+
+    .main-card {
+        width: 100%;
+        position: static;
+    }
+}
