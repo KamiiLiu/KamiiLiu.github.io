@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script src="./sketch.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <!-- <script src="./data.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+        <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>卡卡老師說故事</h1>
+        <div class="wrap-content">
+            <button id="prev-btn">
+                <i class="fas fa-arrow-circle-left"></i>
+            </button>
+        
+        
+            <!-- Book -->
+            <div id="book" class="book">
+                <!-- Paper 1 -->
+                <div id="p1" class="paper">
+                    <div class="front">
+                        <div id="f1" class="front-content">
+                            <h1>連角落生物都懂的台北市高中發展史</h1>
+                            <h2>優質國小高年級讀物</h2>
+                            <p>作者：劉咪咪</p>
+                            <p>贏在起跑點出版社</p>
+                            <p>適合年紀：10+</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b1-map" class="back-content">
+                        </div>
+                        <div class="des">
+                            <p><i class="fa-solid fa-location-dot"></i>藍色為本時期新增的學校</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 2 -->
+                <div id="p2" class="paper">
+                    <div class="front">
+                        <div id="f2" class="front-content map-des">
+                            <h2>日治時期（前）</h2>
+                            <p>日治時期，臺北城的經濟與行政中心集中在西側的萬華區、中正區（近淡水河口等運輸便利要地），故當時的中學皆位於這兩個學區，學生主為日本血統的莘莘學子。</p>
+                            <p class="comment">註：成淵高中原為政府員工下班進修地</p>
+                            <p class="comment">【莘莘學子】解釋：眾多學生。造句：你各位莘莘學子，今天聯絡簿簽了嗎？</p>
+                            <p class="b-desc">本時期新增的學校為：</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b2-map" class="back-content">
+                        </div>
+                        <div class="des">
+                            <p><i class="fa-solid fa-location-dot"></i>藍色為本時期新增的學校</p>
+                            <p><i class="fa-solid fa-location-dot"></i>灰色為既存學校</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 3 -->
+                <div id="p3" class="paper">
+                    <div class="front">
+                        <div id="f3" class="front-content map-des">
+                            <h2>日治時期（後）</h2>
+                            <p>皇民化運動時期，雖推動日台共學，但學校的拓建仍位於總督府附近的日人居住地（大同區、中正區、中山區），以便於日人就讀。故當時的台灣小朋友通勤成本過高，常常要走一兩個小時上下學</p>
+                            <p class="comment">註：泰北高中原名「私立臺灣佛教中學林」，是政府立案的佛教中學。教師為僧侶，學生為志願皈依佛門的男性。</p>
+                            <p class="b-desc">本時期新增的學校為：</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b3-map" class="back-content">
+                        </div>
+                        <div class="des">
+                            <p><i class="fa-solid fa-location-dot"></i>藍色為本時期新增的學校</p>
+                            <p><i class="fa-solid fa-location-dot"></i>灰色為既存學校</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 4 -->
+                <div id="p4" class="paper">
+                    <div class="front">
+                        <div id="f4" class="front-content map-des">
+                            <h2>台灣光復後</h2>
+                            <p>光復後，國民政府廣設學校，以普及教育。其中學校的拓建以軍公教大本營的文山區為主。該時期，文山區共建立了七所學校，但由於目前有些學校倒掉了（或我懶得找了），故不存在於地圖上。</p>
+                            <p class="comment">註：文山區平均每萬人擁有學校數為2.94，是北市12區之冠</p>
+                            <p class="b-desc">本時期新增的學校為：</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b4-map" class="back-content">
+                        </div>
+                        <div class="des">
+                            <p><i class="fa-solid fa-location-dot"></i>藍色為本時期新增的學校</p>
+                            <p><i class="fa-solid fa-location-dot"></i>灰色為既存學校</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 5 -->
+                <div id="p5" class="paper">
+                    <div class="front">
+                        <div id="f5" class="front-content map-des">
+                            <h2>升格直轄市時期</h2>
+                            <p>1967年，台北市升格為直轄市。故該時期，北市各區開始更有預算廣蓋學校</p>
+                            <p class="comment">註：學校的校址仍以平地為主</p>
+                            <p class="b-desc">本時期新增的學校為：</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b5-map" class="back-content">
+                        </div>
+                        <div class="des">
+                            <p><i class="fa-solid fa-location-dot"></i>藍色為本時期新增的學校</p>
+                            <p><i class="fa-solid fa-location-dot"></i>灰色為既存學校</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 6 -->
+                <div id="p6" class="paper">
+                    <div class="front">
+                        <div id="f6" class="front-content map-des">
+                            <h2>十二年國教時期</h2>
+                            <p>1994年，國民政府推動十二年國教政策，故各地區逐步加蓋學校。又因實施高中職社區化政策，要求每一行政區都需配有高中。故當時尚未有學校的松山區，終於蓋了第一所學校-西松高中</p>
+                            <p class="b-desc">本時期新增的學校為：</p>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b6" class="back-content">
+                            <h2>閱讀測驗Q1</h2>
+                            <h3>請問1994年在什麼政策下，台灣政府推動高中社區化？</h3>
+                            <ul>
+                                <li>四書五經，科舉制度</li>
+                                <li>十二年國教，全民教育</li>
+                                <li>重文輕武，文組治國</li>
+                                <li>文藝復興，人文主義</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 7 -->
+                <div id="p7" class="paper">
+                    <div class="front">
+                        <div id="f7" class="front-content">
+                            <h2>閱讀測驗Q2</h2>
+                            <h3>小朋友，請運用你的推理能力，判斷作者劉咪咪，最有可能是哪個學校畢業的？</h3>
+                            <ul>
+                                <li>建國中學</li>
+                                <li>成功高中</li>
+                                <li>私立臺灣佛教中學林</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b7" class="back-content">
+                            <h1>Back 7</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Next Button -->
+            <button id="next-btn">
+                <i class="fas fa-arrow-circle-right"></i>
+            </button>
+        </div>
+    </div>
+    <script src="./map.js"></script>
+    <script src="./books.js"></script>
+</body>
+
+</html>
