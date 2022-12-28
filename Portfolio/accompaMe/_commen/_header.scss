@@ -1,0 +1,143 @@
+header {
+    background-color:$primary;
+    position: relative;
+    .flx-row{
+        display: flex;
+        flex-direction: row;
+    }
+    .jcb{
+        justify-content: space-between;
+    }
+}
+.header-menu {
+    li,
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    i {
+        font-size: 16px;
+        line-height: 1.5em;
+        color: saturate($light-pink, 50%);
+    }
+    a:hover{
+        color: lighten($light-pink, 20%);
+    }
+}
+
+header .cart {
+    position: relative;
+}
+
+header .cart-number {
+    position: absolute;
+    background-color: #fff;
+    top: -5px;
+    right: -10px;
+    font-size: 12px;
+    width: 1.5em;
+    text-align: center;
+    color: saturate($light-pink, 20%);
+}
+
+header .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 150px;
+    background-color: darken($primary, 20%);
+    text-align: center;
+    li>a {
+        display: block;
+        border-bottom: 1px dotted $light-blue;
+    }
+
+    li:last-child>a {
+        border-bottom: none;
+    }
+
+    a:hover {
+        background-color: darken($secondary, 20%);
+    }
+}
+header .pofile {
+    right: calc(20% - 150px);
+    .pofile-pic>img {
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+    }
+}
+header .main-menu:hover .sub-menu {
+    display: block;
+}
+@media screen and (max-width:768px){
+    header .main-menu:hover{
+        padding-bottom: 40px;
+    }
+    header .main-menu:hover .sub-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 57.2226px;
+    left: 0;
+    background-color: #fff;
+    padding-top: 0;
+    li{
+        flex-grow: 1;
+    }
+    li+li{
+        border-left: 1px solid lighten($gray,10%);
+    }
+    li,a{
+        color:darken($secondary, 20%);
+    }
+    a:hover {
+        background-color: #fff;
+        color: saturate($light-pink, 20%);
+    }
+   }
+   header .sub-menu {
+    li{
+        color:darken($secondary, 20%); 
+    }
+    li>a {
+        border: none;
+    }
+}
+}
+@media screen and (max-width:576px){
+    header .product-menu{
+        display: none;
+    }
+    // header {
+    //     position: static;
+    // }
+    // html{
+    //     position: relative;
+    // }
+    // header .product-menu{
+    //     width: 100%;
+    //     background-color: $gray;
+    //     position: absolute;
+    //     z-index: 11;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     display: block;
+    // }
+    // header .header-menu{
+    //     flex-direction: row-reverse;
+    // }
+    // header .main-menu:hover .pofile{
+    //    display: block;
+    //    width: 100%;
+    //    left: 0;
+    // }
+    // header .main-menu:hover .sub-menu li{
+    //     width: 100%;
+    // }
+
+ }

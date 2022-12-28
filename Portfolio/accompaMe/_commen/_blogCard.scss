@@ -1,0 +1,120 @@
+.blog-group{
+    display: flex;
+    a{
+        text-decoration: none;
+    }
+    a+a{
+        margin-left: 5%;
+    }
+    .blog-img{
+        position: relative;
+        overflow: hidden;
+        img{
+           
+            transition: 2s;
+        }
+        &:hover img{
+            transform: scale(1.2);
+        }
+    }
+    .blog-content-wrap{
+        padding: 5%; 
+    }
+    .blog-content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-overflow: ellipsis;
+    }
+    .blog-content h4{
+        color: $text-color;
+        order: 2;
+    }
+    .blog-content p:first-of-type{
+        i{
+            padding-right: 5px;
+        }
+        font-family: 'Caveat', cursive;
+        color: saturate($light-pink, 80%);
+        font-size: 14px;
+        order:1;
+    }
+    .blog-content p:nth-of-type(2){
+        order:3;
+    }
+    .third-subtitle:hover{
+        color: darken($text-color,20%);
+    }
+    .blog-content p:last-of-type{
+        position: absolute;
+        font-size: 14px;
+        right: 0;
+        bottom: 0;
+        text-decoration: none;
+        font-family: 'Caveat', cursive;
+        color: $primary;
+        &:hover{
+            color:saturate($light-pink, 80%);
+        }
+    }
+}
+
+.blog-wrap:hover{
+    i{
+        color:$text-color;  
+    }
+}
+.blog-social{
+    padding-top: 16px;
+    border-top: 2px solid $text-color;
+    .comment{
+        margin-right: 16px;
+    }
+    .comment,.fromsquare{
+        i,p{
+           margin-right: 8px;
+        }
+        p:last-of-type{
+            margin-right: 0px;
+        }
+        &:hover i,&:hover p{
+            color: saturate($light-pink, 50%);
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    .blog-group{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a{
+            width: 45%;
+        }
+        a+a{
+            margin: 0;
+        }
+    }
+}
+.blog-img-icon{
+    background-color: rgba(#000,0.6);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    right: 0%;
+    bottom: 0%;
+    p{
+        margin-bottom: 0;
+        color: #fff;
+    }
+    i{
+        margin-right: 8px;
+        color: #fff;
+    }
+    &:hover i,&:hover p{
+        color: saturate($light-pink, 80%);
+    }
+}
+@media screen and (max-width:576px) {
+    .blog-group{
+        display: block;}
+}

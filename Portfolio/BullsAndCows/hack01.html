@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400&family=Mingzat&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@300;400;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --rose: #ffe4e1;
+            --dark-rose: #C5908E;
+            --gray-rose: #a77b7b;
+            --cor-color: #709999;
+            --gray: #EFEFEF;
+        }
+        * {
+            font-size: 20px;
+            letter-spacing: 4px;
+            font-family: 'Noto Serif TC', serif;
+
+        }
+
+        .wrap {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .guess-box>button {
+            background-color: var(--gray-rose);
+            border: none;
+            color: var(--gray);
+            font-size: 20px;
+        }
+
+        .guess-box>button+button {
+            border-left: 2px solid var(--gray);
+        }
+
+        .col-lg-3 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-lg-3>* {
+            width: 33.333333333%;
+        }
+
+        .answerbox {
+            margin-top: 10px;
+            display: flex;
+            padding: 10px 25px;
+            background-color: var(--rose);
+            align-items: center;
+            /* border-top: 2px solid var(--dark-rose); */
+        }
+
+        .answerbox>span {
+            display: block;
+            color: var(--rose);
+            border-radius: 10%;
+            letter-spacing: 2px;
+            padding: 10px;
+            background-color:var(--dark-rose);
+        }
+
+        .answerbox>div {
+            padding: 0 0 0 30px;
+            text-align: start;
+            color: var(--dark-rose);
+            flex-grow: 1;
+            font-size: 30px;
+        }
+
+        .guessbox {
+            margin-top: 10px;
+            display: flex;
+            border: 2px solid var(--dark-rose);
+        }
+
+        .guessbox>input {
+            flex-grow: 1;
+            border: none;
+            color: var(--dark-rose);
+
+        }
+
+        .guessbox button {
+            border: none;
+            background-color: var(--dark-rose);
+            padding: 10px 50px;
+            color: var(--rose);
+        }
+
+        .guessbox button:hover {
+            background-color: var(--cor-color);
+        }
+
+        .guess-box button:hover {
+            background-color: var(--cor-color);
+            color: #fff;
+        }
+        [disabled="disabled"]{
+            background-color: var(--gray);
+        }
+        @media screen and (max-width: 768px) {
+            .col-12>* {
+                width: 100%;
+            }
+            .guessbox{
+                display: block;
+            }
+            .guessbox>button,
+            .guessbox>input{
+                padding: 10px 0;
+                    width: 100%;
+                }
+            .guess-box>button+button {
+                border-left: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="guess-box col-lg-3 col-12">
+            <button>START</button><button>RESTART</button><button>ANSWER</button>
+        </div>
+
+        <div class="content"></div>
+
+        <div class="guessbox">
+            <input id="abc" type="number" placeholder="按下開始後，請輸入不重複四位數">
+            <button id="guess">Guess</button>
+        </div>
+    </div>
+    <script>
+
+
+        let guess_input = document.querySelector("input");
+        let content = document.querySelector(".content");
+        let start_btn = document.querySelectorAll("button")[0];
+        let restart_btn = document.querySelectorAll("button")[1];
+        let answer_btn = document.querySelectorAll("button")[2];
+        let guess_btn = document.querySelectorAll("button")[3];
+        window.onload=function(){
+        guess_btn.setAttribute("disabled", "disabled");
+        restart_btn.setAttribute("disabled", "disabled");
+        answer_btn.setAttribute("disabled", "disabled");
+        guess_input.setAttribute("disabled", "disabled");
+        restart_btn.style.backgroundColor="var(--gray)";
+        restart_btn.style.color="var(--dark-rose)";
+        answer_btn.style.backgroundColor="var(--gray)";
+        answer_btn.style.color="var(--dark-rose)";
+        }
+        let ansArray
+        let userG = []
+        start_btn.onclick = () => {
+            ansArray = creatAns();
+            guess_btn.removeAttribute("disabled");
+            answer_btn.removeAttribute("disabled");
+            restart_btn.removeAttribute("disabled");
+            guess_input.removeAttribute("disabled");
+            start_btn.setAttribute("disabled", "disabled");
+            start_btn.style.backgroundColor="var(--gray)";
+            start_btn.style.color="var(--dark-rose)";
+            restart_btn.style.backgroundColor="var(--gray-rose)";
+        restart_btn.style.color="var(--gray)";
+        answer_btn.style.backgroundColor="var(--gray-rose)";
+        answer_btn.style.color="var(--gray)";
+        };
+        restart_btn.onclick = () => {
+            ansArray = creatAns();
+            guess_btn.removeAttribute("disabled");
+            guess_input.removeAttribute("disabled");
+            content.innerHTML = "";
+        };
+        answer_btn.onclick = () => {
+            alert(ansArray.join(""));
+        };
+        guess_btn.onclick = () => {
+            userG = ("" + guess_input.value).split("");
+            if (userG.length == 4) {
+                let answerbox = document.createElement("div");
+                let answer = document.createElement("div");
+                answer.innerText = guess_input.value;
+                let compareback = compare(guess_input.value);
+                let tag = document.createElement("span");
+                tag.innerText = `${compareback[0]}A${compareback[1]}B`;
+                content.append(answerbox);
+                answerbox.append(tag);
+                answerbox.append(answer);
+                answerbox.setAttribute("class", "answerbox");
+                GoodGame(compareback);
+            }
+        };
+        function creatAns() {
+            let ansArray = [];
+            do {
+                let num = Math.floor(Math.random() * 10);
+                if (ansArray.find(x => x == num) == undefined) {
+                    ansArray.push(num);
+                }
+            } while (ansArray.length < 4);
+            return ansArray;
+
+        }
+        function compare(userGuess) {
+            let i = 0;
+            let a = 0;
+            let b = 0;
+            let userG = ("" + userGuess).split("");
+            userG.forEach((item, index) => {
+                if (item == ansArray[i]) {
+                    a++;
+                } else if (ansArray.find((x) => x == item) != undefined) {
+                    b++;
+                }
+                i++;
+            });
+            return [a, b];
+        }
+        function GoodGame(a4) {
+            if (a4[0] == 4) {
+                guess_input.setAttribute("disabled", "disabled");
+                guess_btn.setAttribute("disabled", "disabled");
+                alert(`沒錯！答案是${ansArray.join("")}`);
+                guess_input.style.backgroundColor="var(--gray)";
+            }
+        }
+    </script>
+</body>
+
+</html>

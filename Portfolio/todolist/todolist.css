@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Cubic;
+  src: url(./Cubic_11_1.010_R.woff);
+}
+
+*,
+h1,
+li,
+p,
+input {
+  font-family: Cubic;
+}
+
+h1 {
+  margin: 30px 0;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}
+
+h1::before {
+  content: "---";
+}
+
+h1::after {
+  content: "---";
+}
+
+.wrap {
+  border: 1px solid #000;
+  position: relative;
+  margin: 10px auto;
+  max-width: 1000px;
+}
+
+.content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 30px;
+  font-size: 0;
+  width: 100%;
+}
+
+.wrap img {
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  -webkit-filter: contrast(1);
+          filter: contrast(1);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.wrap::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: repeating-linear-gradient(#716348 0%, #716348 4%, transparent 4%, transparent 96%, #716348 96%, #716348 100%), repeating-linear-gradient(0.25turn, #716348 0%, #716348 4%, transparent 4%, transparent 96%, #716348 96%, #716348 100%);
+  background-size: 10px 10px;
+}
+
+input {
+  padding: 0 10px;
+  color: #716348;
+  outline: none;
+  border: none;
+}
+
+.txt {
+  width: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+}
+
+.saveBtn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30%;
+  height: 30px;
+  background-color: #716348;
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #9c9473;
+}
+
+li {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+li input {
+  color: #b1b2ad;
+  background-color: #2f2518;
+  width: 10%;
+  height: 30px;
+  outline: none;
+  border: none;
+}
+
+li input:hover {
+  background-color: #716348;
+}
+
+li .txt {
+  color: #fff;
+  background-color: rgba(113, 99, 72, 0.8);
+}
+
+li li [type="text"] {
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+li li {
+  margin-top: 10px;
+}
+
+li.checked {
+  color: #b1b2ad;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+  li [type="text"] {
+    display: block;
+    width: 100%;
+  }
+  li input {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=todolist.css.map */

@@ -1,0 +1,136 @@
+@import '../commen/variable';
+@import '../commen/header';
+@import '../commen/footer';
+
+body,html{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.wrap{
+    flex-grow: 1;
+}
+.title {
+    text-align: center;
+}
+
+.message-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.message-aside-wrap {
+    position: relative;
+    width: 35%;
+    background-color: saturate($light-pink, 50%);
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.75em;
+    }
+    a:hover {
+        color: complement($info);
+    }
+}
+
+.message-main-wrap {
+    border: 2px solid darken($primary, 20%);
+    box-sizing: border-box;
+    width: 75%;
+    margin-left: -10%;
+    padding:5% 5% 5% 15%;
+    background-color: #fff;
+    .sub-title{
+        text-align: end;
+        font-size: 1em;
+        margin-bottom: 24px;
+        border-bottom: 2px solid $primary;
+    }
+}
+
+.message-main-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .lable,
+    input {
+        font-family: "Noto Serif TC", serif;
+        outline: none;
+        display: block;
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .lable>input {
+        width: 100% ;
+        border: none;
+        border-bottom: 1px solid darken($primary, 20%);
+    }
+
+    .lable {
+        position: relative;
+
+        color: complement($secondary);
+    }
+
+    label>span {
+        position: absolute;
+        padding: 5px 0;
+        pointer-events: none;
+        transition: 0.3s;
+        bottom: 16px;
+    }
+    .lable>input:focus ~ span,
+    .lable>input:valid ~ span
+    {
+        transform:translateY(-28px);
+        font-size: 0.75em;
+    }
+    .lable:nth-child(5){
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    textarea{
+        padding: 5px;
+        width: 100%;
+        height: 100px;
+        position: relative;
+        margin-bottom: 16px;
+    }
+}
+@media screen and (max-width:768px){
+    .message-wrap {
+        display: flex;
+        align-items: stretch;
+    }
+    .message-aside-wrap{
+        width: 40%;
+    }
+    .message-main-wrap{
+        margin-left: 0%;
+        padding: 5%;
+    }
+    .message-aside-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        li>a{
+            font-size: 0.75em;
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .message-wrap{
+        flex-direction: column-reverse;
+        .message-aside-wrap,
+        .message-main-wrap{
+            width: 100%;
+        }
+    }
+    .title{
+        font-size: 1.5em;
+    }
+    .sub-title{
+        font-size: 1.25em;
+    }
+}

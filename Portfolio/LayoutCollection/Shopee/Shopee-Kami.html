@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee-Kami</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
+    <style>
+        * {
+            font-family: "Noto Sans TC", sans-serif;
+            letter-spacing: 1.5px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #d0011b;
+            font-weight: bold;
+        }
+
+        .wrap {
+            border: 1px solid #000;
+            width: 1280px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding: 0 20px;
+        }
+
+        .header-left {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        li:first-child::after {
+            margin-left: 20px;
+            content: '｜';
+            color: #d3d3d3;
+        }
+
+        li>img {
+            width: 15px;
+            margin-right: 10px;
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .icon {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #d0011b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-angle-right {
+            color: white;
+        }
+
+        .items-group {
+            padding-top: 10px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column {
+            width: 34%;
+        }
+
+        .left-column img {
+            height: 100%;
+        }
+
+        .right-column {
+            width: 66%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-color: #fff;
+            padding-bottom: 10px;
+        }
+
+        .store {
+            width: 200px;
+        }
+
+        .store img {
+            width: 90%;
+        }
+
+        .store div {
+            font-size: 18px;
+            color: #d0011b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul class="header-left">
+                <li><a href="#javascript: void(0)">蝦皮商城</a></li>
+                <li><img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/6c502a2641457578b0d5f5153b53dd5d.png"
+                        alt="15天鑑賞期"><span>15天鑑賞期</span></li>
+                <li><img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/16ead7e0a68c3cff9f32910e4be08122.png"
+                        alt="蝦皮安心退"><span>蝦皮安心退</span></li>
+                <li>
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/511aca04cc3ba9234ab0e4fcf20768a2.png"
+                        alt="正品保障">
+                    <span class="item-name">正品保障</span>
+                </li>
+            </ul>
+            <div class="header-right">
+                <a href="#javascript: void(0)"><span>查看全部</span></a>
+                <a href="#javascript: void(0)" class="icon"><i class="fa-solid fa-angle-right icon-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="items-group">
+            <div class="left-column">
+                <a href="#javascript: void(0)"><img src="https://cf.shopee.tw/file/3b3c2b5aa209e1024415fb73e4566191"
+                        alt="盛典"></a>
+            </div>
+            <div class="right-column">
+                <div class="store">
+                    <a href="https://shopee.tw/eslite.tw">
+                        <img src="https://cf.shopee.tw/file/16045601870030bc01bd8810ea99faa6_xhdpi" alt="">
+                    </a>
+                    <div>瘋撒85折券不用搶</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/cp8709">
+                        <img src="https://cf.shopee.tw/file/4c0b7e43028a13ca736cd1a3e523fdf3_xhdpi" alt="">
+                    </a>
+                    <div>新品5折起, 領券再折</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/coffest">
+                        <img src="https://cf.shopee.tw/file/c8caa8e8ef976817faaee26de7abe5e1_xhdpi" alt="">
+                    </a>
+                    <div>淨水器領卷8折</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/nespresso_tw">
+                        <img src="https://cf.shopee.tw/file/80f5aa9e6831d6889bdcbbea1fc9b8fb_xhdpi" alt="">
+                    </a>
+                    <div>全館領券享8折</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/realmetw">
+                        <img src="https://cf.shopee.tw/file/c07ad1acb4b9341f7e07b1adc775c370_xhdpi" alt="">
+                    </a>
+                    <div>夏日狂購3折up</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/philips_official_shop">
+                        <img src="https://cf.shopee.tw/file/ad98592a6881d1cb786142f838325f1a_xhdpi" alt="">
+                    </a>
+                    <div>滿390折50</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/shuuemura.tw">
+                        <img src="https://cf.shopee.tw/file/9ff6c39517867abaf9b1dc6fa33cb5eb_xhdpi" alt="">
+                    </a>
+                    <div>夏日控油新品6折</div>
+                </div>
+                <div class="store">
+                    <a href="https://shopee.tw/ahua.ruok">
+                        <img src="https://cf.shopee.tw/file/d23b0b3d5ab2bcde5704447d6e0699e0_xhdpi" alt="">
+                    </a>
+                    <div>全館蝦幣10倍送</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

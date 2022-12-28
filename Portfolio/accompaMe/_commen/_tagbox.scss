@@ -1,0 +1,27 @@
+.Tag-Box {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        background-color: transparent;
+        color: $text-color;
+        border: 3px solid saturate($light-pink, 50%);
+        box-sizing: border-box;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 5px;
+        width: 30%;
+    }
+    p.active,
+    p:hover{
+        color: #fff;
+        background-color: saturate($light-pink, 50%);
+    }
+
+    p+p {
+        margin-left: 5%;
+    }
+    p:nth-child(3n+1){
+        margin-left: 0;
+    }
+}

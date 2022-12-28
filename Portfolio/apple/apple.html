@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400&family=Mingzat&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@300;400;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="apple.css">
+    <style>
+        * {
+            font-family: 'Noto Serif TC', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="tophead-wrap">
+                <div class="tophead-content col-lg">
+                    <div class="top-head-left col-lg">
+                        <h5>歡迎來到Kami電商</h5>
+                        <i class="fa-brands fa-apple"></i>
+                        <p class="col-lg">
+                            <a href="javascript:;">登錄</a>
+                            <a href="javascript:;">註冊</a>
+                        </p>
+                    </div>
+                    <div class="top-head-right">
+                        <!--直接用導航條包超連結-->
+                        <nav class="col-lg">
+                            <a href="javascript:;">購物車</a>
+                            <a href="javascript:;">訂單</a>
+                            <a href="javascript:;">售後服務</a>
+                            <a href="javascript:;">配件</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="down-head-content col-lg col-sm">
+                <div class="logo-bar col-lg">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h4>姐買的<span>是。信。仰。</span></h4>
+                </div>
+                <div class="search-box col-lg">
+                    <input type="text" placeholder="夢裡什麼都有，什麼都賣">
+                    <input type="submit" value="搜索">
+                </div>
+        </header>
+        <div class="menu-wrap">
+            <div class="menu-content ">
+                <button>IPhone</button>
+                <button>IPad</button>
+                <button>MacPro</button>
+            </div>
+        </div>
+        <div class="breadcrumbs content col-lg">
+            <a href="javascript:;">首頁</a>
+            <a href="javascript:;">生活用品</a>
+            <a href="javascript:;">電子產品</a>
+            <a></a>
+        </div>
+        <div class="product-wrap content col-lg col-sm">
+            <div class="left bs">
+                <div class="photo-top-wrap bs">
+                    <div class="small-pic bs">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="photo-bottom-wrap col-lg">
+                    <a href="javascript:;"><i class="fa-solid fa-caret-left"></i></a>
+                    <div class="col-lg l-carousel"></div>
+                    <a href="javascript:;"><i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="pro-desc">
+                </div>
+                <div class="pro-spec">
+                    <div class="pro-spec-tag ">
+                        <div class="choose col-lg">
+                        </div>
+                    </div>
+                    <div class="pro-spec-pram">
+                        <dl class="col-lg">
+                        </dl>
+                        <dl class="col-lg">
+                        </dl>
+                    </div>
+                    <div class="pro-spec-price col-lg">
+                        <input type="number" value="1">
+                        <div class="switchbox">
+                            <button class="switchbox-up"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="switchbox-down"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                        <button onclick=alert(`這個需求做不了`)>加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-warp  col-lg col-sm">
+            <div class="content-aside col-lg">
+                <p>你知道這不起眼的組合<br>在Kami.com只要</p>
+                <p>Nt.???</p>
+                <button onclick=alert(`這個需求做不了`)>買爆！</button>
+            </div>
+            <div class="content-main">
+                <div class="content-main-menu col-lg">
+                    <div class="iten select">
+                        <img src="">
+                        <p>ABC</p>
+                        <p>NT.50</p>
+                    </div>
+                    <i class="fa-solid fa-plus"></i>
+                    <div class="iten-pac col-lg"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let basePrice;
+        let prodoctName = ["IPhone", "IPad", "Mac"];
+        let accessoriesList = [
+            { Name: "20W USB-C 電源轉接器", Price: 590, imgUrl: "./pic/sub/usb.jpeg" },
+            { Name: "140W USB-C 電源轉接器", Price: 2890, imgUrl: "./pic/sub/battery.jpeg" },
+            { Name: "電源轉接器延長線", Price: 590, imgUrl: "./pic/sub/line.jpeg" },
+            { Name: "AirPods(第3代)", Price: 5990, imgUrl: "./pic/sub/airpod.jpeg" },
+        ]
+        let productList = {
+            IPhone: {
+                Detail: {
+                    productName: 'iPhone 11',
+                    baseImgUrl: './pic/phone/phone.001.jpeg'
+                },
+                OutWard: [
+                    { imageUrl: './pic/phone/phone.001.jpeg' },
+                    { color: '無妻無紫', colorValue: '#D9D4E3', imageUrl: './pic/phone/phone.002.jpeg' },
+                    { color: '一窮二白', colorValue: '#ffff', imageUrl: './pic/phone/phone.003.jpeg' },
+                    { color: '年華慘綠', colorValue: '#CEEFE2', imageUrl: './pic/phone/phone.004.jpeg' },
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '64GB', fit: 24900 },
+                        { size: '128GB', fit: 26900 },
+                        { size: '256GB', fit: 30400 },
+                    ]
+                }
+            },
+            IPad: {
+                Detail: {
+                    productName: 'iPad',
+                    baseImgUrl: './pic/pad/pad.001.jpeg',
+                },
+                OutWard: [
+                    { imageUrl: './pic/pad/pad.001.jpeg' },
+                    { color: '前途無亮', colorValue: '#5F6165', imageUrl: './pic/pad/pad.002.jpeg' },
+                    { color: '骨碎身粉', colorValue: '#F9D9C5', imageUrl: './pic/pad/pad.003.jpeg' },
+                    { color: '臉色蒼白', colorValue: '#fff', imageUrl: './pic/pad/pad.004.jpeg' },
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '32GB', fit: 10900 },
+                        { size: '128GB', fit: 13900 },
+                    ]
+                }
+            },
+            MacPro: {
+                Detail: {
+                    productName: 'MacPro 13',
+                    baseImgUrl: './pic/mac/mac.001.jpeg',
+                },
+                OutWard: [
+                    { imageUrl: './pic/mac/mac.001.jpeg' },
+                    { color: '槁木死灰', colorValue: '#C0C2C8', imageUrl: './pic/mac/mac.004.jpeg' },
+                    { color: '印堂發黑', colorValue: '#53545A', imageUrl: './pic/mac/mac.002.jpeg' },
+                    { color: '面色臘黃', colorValue: '#F9D9C5', imageUrl: './pic/mac/mac.003.jpeg' },
+                ],
+                Spec: {
+                    Storge: [
+                        { size: '256GB', fit: 51300 },
+                        { size: '512GB', fit: 57300 },
+                        { size: '1TB', fit: 63300 },
+                        { size: '2TB', fit: 75300 },
+                    ]
+                }
+            }
+        };
+        let a = document.createElement("a")
+        let imgArrayUrl = [, , ,];
+        let phone_btn = document.querySelectorAll("button")[0];
+        let pad_btn = document.querySelectorAll("button")[1];
+        let mac_btn = document.querySelectorAll("button")[2];
+        let breadmenu = document.querySelector(".breadcrumbs");
+        let nowLocation = document.querySelector(".breadcrumbs>a:last-child");
+        let photo_wrap = document.querySelector(".photo-top-wrap");
+        let smallPic = document.querySelector(".small-pic>img");
+        let smallPic_Div = document.querySelector(".small-pic");
+        let mask_div = document.createElement("div");
+        let bigpic_div = document.createElement("div");
+        let bigpic_img = document.createElement("img");
+        let vCarousel = document.querySelector(".l-carousel");
+        let count = document.querySelector(".pro-spec-price>input");
+        let count_up = document.querySelector(".switchbox-up");
+        let count_down = document.querySelector(".switchbox-down");
+
+        window.onload = function () {
+            setInfo(productList.IPhone);
+            setPram(productList.IPhone);
+            btnActive(phone_btn);
+            breadcrumbs(prodoctName[0]);
+            picLoad(productList.IPhone.Detail.baseImgUrl);
+            lCarousel(productList.IPhone);
+            setSmallImgArray(productList.IPhone);
+            selectColor();
+            chooseDD(productList.IPhone);
+            setAsideItenPram();
+            setMainItenPram(productList.IPhone);
+            chaChaGo();
+        };
+
+        smallPic_Div.onmousemove = function (event) {
+            if (document.body.clientWidth > 768) {
+                let left = event.clientX - smallPic.getBoundingClientRect().left - mask_div.offsetWidth / 2;
+                let top = event.clientY - smallPic.getBoundingClientRect().top - mask_div.offsetHeight / 2;
+                if (top < 0) {
+                    top = 0;
+                } else if (top > smallPic.clientHeight - mask_div.clientHeight) {
+                    top = smallPic.clientHeight - mask_div.clientHeight;
+                }
+                if (left < 0) {
+                    left = 0;
+                } else if (left > smallPic.clientWidth - mask_div.clientWidth) {
+                    left = smallPic.clientWidth - mask_div.clientWidth;
+                }
+                mask_div.style.top = top + "px";
+                mask_div.style.left = left + "px";
+                let scale = (smallPic.clientWidth - mask_div.offsetWidth) / (bigpic_img.offsetWidth - bigpic_div.clientWidth);
+                console.log((smallPic.clientWidth - mask_div.offsetWidth) / (bigpic_img.offsetWidth - bigpic_div.clientWidth));
+                bigpic_img.style.left = -left / scale + "px";
+                bigpic_img.style.top = -top / scale + "px";
+            }
+        }
+        count_up.onclick = () => {
+            count.value++;
+            priceChange();
+        }
+        count_down.onclick = () => {
+            if (count.value > 1) {
+                count.value--;
+                priceChange();
+            }
+        }
+        smallPic_Div.onmouseenter = () => {
+            if (document.body.clientWidth > 768) {
+                magnifier();
+            }
+        }
+        smallPic_Div.onmouseleave = () => {
+            if (document.body.clientWidth > 768) {
+                magnifierOut();
+            }
+        }
+        phone_btn.onclick = () => {
+            setInfo(productList.IPhone);
+            setPram(productList.IPhone);
+            count.value = 1;
+            lCarousel(productList.IPhone);
+            btnActive(phone_btn);
+            breadcrumbs(prodoctName[0]);
+            picLoad(productList.IPhone.Detail.baseImgUrl);
+            setSmallImgArray(productList.IPhone);
+            chooseDD(productList.IPhone);
+            setMainItenPram(productList.IPhone);
+        }
+        pad_btn.onclick = () => {
+            setInfo(productList.IPad);
+            setPram(productList.IPad);
+            count.value = 1;
+            lCarousel(productList.IPad);
+            btnActive(pad_btn);
+            breadcrumbs(prodoctName[1]);
+            picLoad(productList.IPad.Detail.baseImgUrl);
+            setSmallImgArray(productList.IPad);
+            chooseDD(productList.IPad);
+            setMainItenPram(productList.IPad);
+        }
+        mac_btn.onclick = () => {
+            setInfo(productList.MacPro);
+            setPram(productList.MacPro);
+            count.value = 1;
+            lCarousel(productList.MacPro);
+            btnActive(mac_btn);
+            breadcrumbs(prodoctName[2]);
+            picLoad(productList.MacPro.Detail.baseImgUrl);
+            setSmallImgArray(productList.MacPro);
+            chooseDD(productList.MacPro);
+            setMainItenPram(productList.MacPro);
+        }
+
+        function priceChange() {
+            let price = document.querySelector(".ptop>span:last-child");
+            let num = basePrice * count.value;
+            price.innerText = num;
+        }
+        function breadcrumbs(prodoct) {
+            nowLocation.innerText = prodoct;
+            breadmenu.append(nowLocation);
+        };
+        function picLoad(imgsrc) {
+            smallPic.src = imgsrc;
+            bigpic_img.src = imgsrc;
+        }
+        function btnActive(select) {
+            phone_btn.removeAttribute("class", "active");
+            pad_btn.removeAttribute("class", "active");
+            mac_btn.removeAttribute("class", "active");
+            select.setAttribute("class", "active");
+        }
+        function magnifier() {
+            mask_div.className = "mask";
+            photo_wrap.appendChild(bigpic_div);
+            smallPic_Div.appendChild(mask_div);
+            bigpic_img.src = smallPic.src;
+            bigpic_div.className = "big-pic";
+            bigpic_div.appendChild(bigpic_img);
+        }
+        function magnifierOut() {
+            photo_wrap.removeChild(bigpic_div);
+            smallPic_Div.removeChild(mask_div);
+            bigpic_div.removeChild(bigpic_img);
+        };
+        function lCarousel(product) {
+            vCarousel.innerText = "";
+            [{ imageUrl: './pic/phone/phone.001.jpeg' }].concat(product.OutWard).forEach(x => {
+
+            })
+            for (let i = 0; i < 4; i++) {
+                let picArray = [];
+                let imgi = document.createElement("img");
+                let ai = document.createElement("a");
+                imgi.src = product.OutWard[i].imageUrl;
+                ai.href = "javascript:;";
+                vCarousel.append(ai);
+                ai.append(imgi);
+                ai.onclick = () => {
+                    picLoad(imgArrayUrl[i]);
+                }
+            };
+        }
+        let aLeft = document.querySelectorAll(".photo-bottom-wrap>a")[0];
+        let aRight = document.querySelectorAll(".photo-bottom-wrap>a")[1];
+        aLeft.onclick = () => { runCarouse(3); showCarouse() };
+        aRight.onclick = () => { runCarouse(0); showCarouse() };
+
+        function lCarouselChange(imgAll, imgArray) {
+            for (let i = 0; i < imgAll.length; i++) {
+                imgAll[i].src = imgArray[i].src
+            }
+        }
+        function setSmallImgArray(product) {
+            imgArrayUrl = [];
+            for (let i = 0; i < 4; i++) {
+                imgArrayUrl.push(product.OutWard[i].imageUrl)
+            }
+        }
+        function runCarouse(imgindex) {
+            let putBack = imgArrayUrl[imgindex];
+            imgArrayUrl.splice(imgindex, 1);
+            if (imgindex == 0) { imgArrayUrl.push(putBack); }
+            else { imgArrayUrl.unshift(putBack); }
+
+            smallPic.src = imgArrayUrl[0];
+            bigpic_img.src = imgArrayUrl[0];
+        }
+        function showCarouse() {
+            let imgArray = document.querySelectorAll(".l-carousel>a>img");
+            for (let i = 0; i <= 3; i++) {
+                imgArray[i].src = imgArrayUrl[i];
+            }
+        }
+        function setInfo(product) {
+            let prodes = document.querySelector(".pro-desc")
+            prodes.innerHTML = `<h1>${product.Detail.productName}</h1>
+                    <p><span>促銷方案</span>小本生意、佛系經營，如果有緣，自然就會賣掉了</p>
+                    <div class="price-wrap">
+                        <div class="ptop">
+                        <span>價格</span>
+                        <span>NT.</span>
+                        <span>${product.Spec.Storge[0].fit}</span>
+                    </div>
+                        <div class="pbottom">
+                            <span>配送地點</span>
+                            <span>UberEat 到得了的地方，Kami.com都能送</span>
+                        </div>                    </div>`
+        }
+        function setMainItenPram(product) {
+            let selectIten = document.querySelector(".iten");
+            let selectItenImg = selectIten.querySelector("img");
+            let selectItenTitle = selectIten.querySelector("p:first-of-type");
+            let selectItenPrice = selectIten.querySelector("p:last-of-type");
+            selectItenImg.src = product.Detail.baseImgUrl;
+            selectItenPrice.innerText = product.Spec.Storge[0].fit;
+            selectItenTitle.innerText = product.Detail.productName;
+        }
+        function setMainItenImg(imgUrl) {
+            let selectIten = document.querySelector(".iten");
+            let selectItenImg = selectIten.querySelector("img");
+            selectItenImg.src = imgUrl;
+        }
+        function setMainItenPrice(price) {
+            let selectIten = document.querySelector(".iten");
+            let selectItenPrice = selectIten.querySelector("p:last-of-type");
+            selectItenPrice.innerText = price;
+        }
+        function setAsideItenPram() {
+            let asideItenBox = document.querySelector(".iten-pac");
+            for (let i = 0; i < accessoriesList.length; i++) {
+                let asideIten = document.createElement("div");
+                let asideImg = document.createElement("img");
+                let asideTitle = document.createElement("p");
+                let asideDesc = document.createElement("p");
+                let asideInput = document.createElement("input");
+                let asideLable = document.createElement("lable");
+                asideIten.setAttribute("class", "iten aside");
+                asideInput.setAttribute("type", "checkbox");
+                asideInput.setAttribute("Pvalue",accessoriesList[i].Price );
+                asideIten.setAttribute("id", `tag${i}`);
+                asideLable.setAttribute("id", `tag${i}`);
+                asideLable.innerText = `Nt.${accessoriesList[i].Price}`;
+                asideTitle.innerText = accessoriesList[i].Name;
+                asideImg.src = accessoriesList[i].imgUrl;
+                asideItenBox.appendChild(asideIten);
+                asideIten.appendChild(asideImg);
+                asideIten.appendChild(asideTitle);
+                asideIten.appendChild(asideDesc);
+                asideDesc.append(asideInput);
+                asideDesc.append(asideLable);
+            }
+        }
+        function setPram(product) {
+            let dl = document.querySelectorAll("dl");
+            dl[0].innerText = "";
+            dl[1].innerText = "";
+            let colorBox = document.querySelectorAll(".pro-spec-pram>dl")[0];
+            let sizeBox = document.querySelectorAll(".pro-spec-pram>dl")[1];
+            let colorName = document.createElement("dt");
+            let sizeName = document.createElement("dt");
+            colorName.innerText = "顏色";
+            sizeName.innerText = "規格";
+            colorBox.appendChild(colorName);
+            sizeBox.appendChild(sizeName);
+            for (let index = 1; index <= product.OutWard.length - 1; index++) {
+                let colorIten = document.createElement("dd");
+                colorIten.innerHTML = product.OutWard[index].color;
+                colorIten.setAttribute("imgsrc", product.OutWard[index].imageUrl);
+                colorIten.style.background = product.OutWard[index].colorValue;
+                colorBox.appendChild(colorIten);
+            }
+            basePrice = product.Spec.Storge[0].fit;
+            for (let index = 0; index < product.Spec.Storge.length; index++) {
+                let sizeIten = document.createElement("dd");
+                sizeIten.innerHTML = product.Spec.Storge[index].size;
+                sizeIten.setAttribute("price", product.Spec.Storge[index].fit);
+                sizeBox.appendChild(sizeIten);
+            }
+        }
+
+        function selectColor() {
+            let selectColor_btn = document.querySelectorAll(".pro-spec-pram>dl:first-child>dd");
+            selectColor_btn.forEach((i) => {
+                i.onclick = () => {
+                    smallPic.src = i.getAttribute("imgsrc");
+                };
+            });
+        }
+        function chooseDD(product) {
+            let dl = document.querySelectorAll("dl");
+            let tagbox = document.querySelector(".choose");
+            let arr = new Array(dl.length);//創建一個長度為dl的長度
+            tagbox.innerHTML = "";
+            arr.fill(0);//先把arr都填充為0
+            let dd0 = dl[0].querySelectorAll("dd");
+            let dd1 = dl[1].querySelectorAll("dd");
+            for (let i = 0; i < dd0.length; i++) {
+                dd0[i].onclick = function () {
+
+                    tagbox.innerHTML = "";
+                    smallPic.src = this.getAttribute("imgsrc");
+                    for (let j = 0; j < dd0.length; j++) {
+                        dd0[j].style.border = "1px solid #C5908E";
+                    }
+
+                    this.style.border = "5px solid #709999";
+                    arr[0] = this.innerText;
+                    arr.forEach(function (value) {
+                        if (value) {
+                            let mark = document.createElement("div");
+                            mark.className = "tag col-lg";
+                            mark.innerText = value;
+                            let aNode = document.createElement("a");
+                            aNode.innerText = "x";
+                            mark.appendChild(aNode);
+                            tagbox.appendChild(mark);
+                        }
+                    })
+                    setMainItenImg(this.getAttribute("imgsrc"))
+                }
+            }
+            let price = document.querySelector(".ptop>span:last-child");
+            count.value = 1;
+            for (let i = 0; i < dd1.length; i++) {
+                dd1[i].onclick = function () {
+                    basePrice = product.Spec.Storge[i].fit;
+                    price.innerText = product.Spec.Storge[i].fit * count.value;
+                    for (let j = 0; j < dd1.length; j++) {
+                        tagbox.innerHTML = "";
+                        dd1[j].style.border = "1px solid #C5908E";
+                    }
+                    setMainItenPrice(product.Spec.Storge[i].fit);
+                    this.setAttribute("style", "border: 5px solid #709999;");
+                    arr[1] = this.innerText;
+                    arr.forEach((value, index) => {
+                        if (value) {
+                            let mark = document.createElement("div");
+                            mark.className = "tag col-lg";
+                            mark.innerText = value;
+                            let aNode = document.createElement("a");
+                            aNode.innerText = "x";
+                            mark.setAttribute("situation", index)//借來寫自定義屬性
+                            mark.appendChild(aNode);
+                            tagbox.appendChild(mark);
+                        }
+                    })
+                    let aNodebox = document.querySelector(".choose");
+                    var aNodeArray = document.querySelectorAll(".choose>*");
+                    //我是想放一個全局作用域的座標
+                    for (let n = 0; n < arr.length; n++) {
+                        aNodeArray[n].onclick = () => {
+                            let idx = aNodeArray[n].getAttribute("situation");
+                            arr[idx] = 0;
+                            let dd = dl[idx].querySelectorAll("dd");
+
+                            dd.forEach((iten) => {
+                                if (idx == 0) {
+                                    let downPic = document.querySelector(".iten>img");
+                                    downPic.src = product.Detail.baseImgUrl;
+                                }
+                                iten.style.border = "1px solid #C5908E";
+                            })
+                            let aNodebox = document.querySelector(".choose");
+                            aNodebox.removeChild(aNodeArray[n]);
+
+
+                        }
+                    }
+
+
+
+
+
+                }
+            }
+        }
+        function chaChaGo() {
+            let checkInput = document.querySelectorAll(".content-main-menu .iten > p>input");
+            let checklabel = document.querySelectorAll(".content-main-menu .iten > p>label");
+
+            checkInput.forEach((iten, index) => {
+                let setPrice = document.querySelector(".content-aside>p:last-of-type");
+                iten.onclick = () => {
+                    let oldPrice = parseInt(document.querySelector(".iten>p:last-child").innerText);
+                    checkInput.forEach((itens) => {
+                        if (itens.checked) {
+                            oldPrice=oldPrice+parseInt(itens.getAttribute("Pvalue"))
+                        }
+                    })
+                    setPrice.innerText=`Nt.${oldPrice}`
+                }
+            })}
+
+    </script>
+</body>
+
+</html>

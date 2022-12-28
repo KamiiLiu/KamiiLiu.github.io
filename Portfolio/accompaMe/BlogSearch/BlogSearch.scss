@@ -1,0 +1,61 @@
+@import '../_common/variable';
+@import '../_common/header';
+@import '../_common/footer';
+@import '../_common/unite';
+@import '../_common/_blogCard';
+@import '../_common/_tagbox';
+
+.title {
+    text-align: center;
+    margin-top: 80px;
+    span{
+        font-size: 1em;
+        color:  saturate($light-pink, 50%);
+    }
+}
+.blog-group{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog-wrap{
+    width: 48%;
+    background-color: #fff;
+    margin-bottom: 32px;
+}
+.blog-group a+a{
+    margin-left: 0;
+}
+.blog{
+    display: flex;
+    flex-direction: row;
+}
+.blog-img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img{
+        min-width: 400px;
+    }
+}
+.Tag-Box {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    height: 80px;
+    p {
+        height: 40px;
+        flex-grow: 1;
+        display: block;
+        width: auto;
+    }
+    p+p {
+        margin-left: 5%;
+    }
+    p:nth-child(3n+1){
+        margin-left: 0%;
+    }
+    p:nth-child(4){
+        margin-left: 5%;
+    }
+
+}

@@ -1,0 +1,533 @@
+@import "reset";
+
+$rose: #ffe4e1;
+$tri-rose: #E3E0FF;
+$dark-rose: #C5908E;
+$gray-rose: #997070;
+.wrap {
+    padding-bottom: 50px;
+}
+
+//撰寫技巧：寫完html馬上寫sass
+.tophead-wrap {
+    background-color: #303030;
+}
+
+.bs {
+    box-sizing: border-box;
+}
+
+.tophead-content {
+    line-height: 50px;
+
+    .top-head-left {
+        h5 {
+            letter-spacing: 1.5px;
+            margin-right: 5px;
+        }
+
+        i {
+            line-height: 1.5rem;
+        }
+
+        p {
+
+            margin-left: 8px;
+        }
+    }
+
+    a:hover {
+        color: $rose; //玫瑰金色號
+    }
+
+    a {
+        display: block;
+        //我將[a]display: block之後他預設會跟父層滿版，
+        //因此我要寫一個line-height去使它有自己的高
+        line-height: 16px;
+        font-size: 16px;
+    }
+
+    a+a {
+        margin-left: 5px;
+        padding-left: 8px;
+        border-left: 1px solid #a7a7a7;
+    }
+}
+
+//a標籤之間會有預設的一點點間距，這是來自於行內元素的特性
+//可以在父層加上font-size: 0;
+.down-head-content {
+    line-height: 100px;
+
+    .logo-bar {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+
+        i {
+            font-size: 1em;
+            color: $gray-rose;
+        }
+
+        h4 {
+            font-weight: 400;
+            color: darken(#c7c7c7, 30%);
+            margin-left: 10px;
+
+            span {
+                font-size: 1.2em;
+                font-weight: 900;
+                color: $dark-rose;
+            }
+        }
+    }
+
+    .search-box {
+        align-items: stretch;
+        max-width: 600px;
+        border: 1px solid $gray-rose;
+
+        [type=text] {
+            box-sizing: border-box;
+            flex-grow: 1;
+            color: $gray-rose;
+            border: none;
+
+            &::placeholder {
+                color: #a7a7a7;
+            }
+        }
+
+        [type=submit] {
+            box-sizing: border-box;
+            border: none;
+            color: #fff;
+            padding: 10px 50px;
+            background-color: $gray-rose;
+
+            &:hover {
+                background-color: #709999;
+            }
+        }
+    }
+}
+
+.menu-wrap {
+    margin-top: 20px;
+    border-bottom: 5px solid $dark-rose;
+
+    .menu-content {
+        font-size: 0;
+
+        button {
+            border-radius: 0%;
+            padding: 20px 30px;
+            color: $dark-rose;
+            font-size: 18px;
+            font-weight: 400;
+
+            &.active,
+            &:hover {
+                color: #fff;
+                background-color: $dark-rose;
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    justify-content: start;
+    margin-top: 10px;
+
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-rose;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    a:hover {
+        color: #709999;
+    }
+
+    a+a::before {
+        content: ">";
+        padding-right: 10px;
+    }
+}
+
+.product-wrap {
+    padding-top: 50px;
+    justify-content: start;
+    align-items: start;
+
+    .left {
+        width: 30%;
+        border-bottom: 2px solid $gray-rose;
+    }
+
+    .right {
+        flex-grow: 1;
+        padding-left: 10%;
+    }
+}
+
+//放大鏡效果
+.photo-top-wrap {
+    width: 100%;
+    position: relative;
+
+    .small-pic {
+        border: 2px solid $gray-rose;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        .mask {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #ddd;
+        }
+    }
+
+    .big-pic {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 320px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+
+
+
+[class*=content] {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photo-bottom-wrap {
+    align-items: stretch;
+    justify-content: space-between;
+
+    >a {
+        font-size: 30px;
+        width: 10%;
+        padding: 0 10px;
+        background-color: $gray-rose;
+        color: red;
+        vertical-align: middle;
+    }
+
+    .l-carousel {
+        max-width: 80%;
+        justify-content: space-evenly;
+
+        a {
+            width: 20%;
+        }
+
+        a>img {
+            width: 100%;
+        }
+    }
+}
+
+.pro-desc {
+    h1 {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 900;
+        color: $gray-rose;
+        letter-spacing: 5px;
+    }
+
+    p,
+    span {
+        letter-spacing: 3px;
+        line-height: 2em;
+        margin-top: 10px;
+    }
+
+    p>span {
+        background-color: #709999;
+        color: $rose;
+        padding: 5px 10px;
+        margin-right: 5px;
+    }
+}
+
+.price-wrap {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: $rose;
+
+    span {
+        color: #888;
+    }
+
+    .ptop>span:last-child {
+        font-size: 25px;
+        font-weight: 900;
+        color: #470024;
+    }
+
+    .ptop>span:first-child,
+    .pbottom>span:first-child {
+        font-size: 18px;
+        color: $gray-rose;
+    }
+
+}
+
+.pro-spec-pram {
+    margin-top: 20px;
+
+    dl {
+        justify-content: start;
+    }
+
+    dt,
+    dd {
+        cursor: pointer;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+        border: 1px solid $dark-rose;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    dt {
+        font-weight: 900;
+        background-color: $dark-rose;
+        color: #fff;
+    }
+
+    dd {
+        box-sizing: border-box;
+        text-shadow: .1px .1px 20px #FFf;
+        color: $dark-rose;
+
+        &:hover {
+            border: 5px solid #709999;
+
+        }
+    }
+}
+
+.pro-spec-price {
+    justify-content: start;
+    align-items: stretch;
+
+    input {
+        text-align: center;
+        color: $dark-rose;
+    }
+
+    .switchbox {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        //background-color: $gray-rose;
+        color: #fff;
+        padding: 0 10px;
+
+        >* {
+            flex-grow: 1;
+        }
+    }
+
+    >button {
+        background-color: $gray-rose;
+        color: $rose;
+        padding: 0 10px;
+    }
+}
+
+.choose {
+    justify-content: start;
+    margin-top: 10px;
+    padding-left: 10px;
+
+    .tag {
+        border: 1px solid $gray-rose;
+        color: $gray-rose;
+        margin-right: 10px;
+        padding-left: 10px;
+        cursor: pointer;
+        a {
+            padding:10px 20px;
+            color: darken($rose, 10%);
+            margin-left: 10px;
+        }
+    }
+}
+
+.content-warp {
+    align-items: stretch;
+    padding: 50px 10px;
+
+    .content-aside {
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        color: #fff;
+        padding-top: 10px;
+        line-height: 2em;
+        text-align: center;
+        width: 20%;
+        background-color: $gray-rose;
+
+        button {
+            margin-top: 10px;
+            width: 50%;
+            background-color: $rose;
+            color: $gray-rose;
+            font-weight: 900;
+        }
+        button:hover{
+            background-color: #709999;
+            color: #fff;
+        }
+    }
+
+    .content-main {
+        width: 80%;
+    }
+}
+
+.content-main-menu {
+    padding: 10px;
+    border: 3px solid $gray-rose;
+    align-items: center;
+    >i,
+    >.iten {
+        text-align: center;
+        margin-right: 50px;
+    }
+
+    i {
+        font-size: 25px;
+        align-self: center;
+    }
+   img{
+    margin: 0 auto;
+        width: 50%;
+    }
+    .iten>p {
+        margin-top: 10px;
+        letter-spacing: 2px;
+        color: $gray-rose;
+    }
+
+    .iten>p:first-of-type {
+        font-weight: 900;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .col-sm {
+        display: block;
+    }
+
+    .logo-bar {
+        justify-content: start;
+    }
+
+    .top-head-right {
+        display: none;
+    }
+
+    [class*=content] {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .product-wrap>.left {
+        width: 100%;
+    }
+
+    .photo-top-wrap {
+        width: 100%;
+    }
+
+    .product-wrap .right {
+        padding-left: 0;
+    }
+    dl.col-lg{
+        justify-content: start;
+        flex-wrap: wrap; 
+    }
+    dd,dt{
+        margin-right: 1px;
+    }
+    .content-warp{
+        margin-top: 30px;
+        padding: 0;
+        .content-main,
+        .content-aside{
+            margin: 0;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+
+        }
+        .content-aside{
+        padding: 10px;
+        }
+        .content-main-menu{
+            max-width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        
+        .iten-pac{
+            flex-wrap: wrap;
+            max-width: 100%;
+            font-size: 16px;
+            white-space:pre-wrap;
+            div{
+                word-wrap:break-word;
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:414px) {
+    h4 {
+        font-size: 20px;
+    }
+
+    .menu-content {
+        button {
+            width: 33%;
+        }
+    }
+
+    .breadcrumbs a {
+        font-size: 12px;
+    }
+
+    dl,
+    dd {
+        font-size: 18px;
+    }
+}

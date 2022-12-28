@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @charset "UTF-8";
+
+        h2,
+        h5,
+        p {
+            text-align: center;
+        }
+
+        .bg {
+            width: 1480px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: #414040;
+        }
+
+        * {
+            font-family: serif;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        h2,h5 {
+            font-size: 24px;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+            margin: 60px 0;
+        }
+
+        .red {
+            background-color: #fde5e6;
+        }
+
+        .orange {
+            background-color: #fdece5;
+        }
+
+        .yellow {
+            background-color: #fef5e4;
+        }
+
+        [class*=wrap] {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 1480px;
+            box-sizing: border-box;
+        }
+
+        [class*=ul] {
+            display: flex;
+            list-style: none;
+            flex-direction: wrap;
+        }
+
+        nav.wrap {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            border-bottom: 2px solid #adaaaa;
+            font-size: 15px;
+        }
+
+        .shop-inform-wrap {
+            justify-content: start;
+        }
+
+        .shop-inform-wrap p+p:before {
+            content: "|";
+            color: shop-inform-wrap;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .shop-bar-wrap {
+            justify-content: end;
+        }
+
+        .shop-bar-wrap div {
+            box-sizing: border-box;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 15px;
+            border-right: 1px solid #adaaaa;
+        }
+
+        .shop-bar-wrap div:not(:last-child):hover {
+            border-bottom: 5px solid #ffb4b4;
+        }
+
+        .shop-bar-wrap div .fa-magnifying-glass:hover {
+            color: #ffb4b4;
+        }
+
+        .shop-bar-wrap div .searchbar {
+            border: none;
+        }
+
+        select,
+        input {
+            border: none;
+            outline: none;
+        }
+
+        .header-wrap {
+            justify-content: space-between;
+            height: 80px;
+            padding: 0 20px;
+            margin: 0 0 0 0;
+        }
+
+        .header-wrap .header-menu-ul,
+        .header-wrap .header-socialmedia-ul {
+            font-weight: 700;
+        }
+
+        .header-wrap .header-menu-ul li,
+        .header-wrap .header-socialmedia-ul li {
+            padding: 6px 15px 6px 0;
+        }
+
+        .header-wrap .header-menu-ul li a,
+        .header-wrap .header-socialmedia-ul li a {
+            transition: 0.3s;
+        }
+
+        .header-wrap .header-menu-ul li:first-child a,
+        .header-wrap .header-menu-ul li:hover a,
+        .header-wrap .header-socialmedia-ul li:first-child a,
+        .header-wrap .header-socialmedia-ul li:hover a {
+            color: #ffb4b4;
+        }
+
+        .header-wrap .header-menu-ul li,
+        .header-wrap .header-socialmedia-ul li {
+            color: #adaaaa;
+        }
+
+        .header-wrap .header-menu-ul li:hover,
+        .header-wrap .header-socialmedia-ul li:hover {
+            color: #414040;
+        }
+
+        .banner-col1 {
+            background-image: url("https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/slider1.jpg");
+            background-repeat: no-repeat;
+            background-size: 1480px;
+            color: #fff;
+            padding: 100px 70px;
+        }
+
+        .banner-col1 span {
+            font-size: 16px;
+            background-color: #000;
+            padding: 8px 13px;
+        }
+
+        .banner-col1 h1 {
+            text-align: left;
+            font-size: 80px;
+            font-weight: 700;
+            width: 600px;
+            margin: 20px 0;
+            color: #000;
+        }
+
+        .banner-col1 p {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: left;
+            margin: 0 0 15px 0;
+            width: 480px;
+            color: #000;
+        }
+
+        .banner-col1 a {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1.92px;
+            padding: 0 10px 0 0;
+        }
+
+        .banner-col1 a::before {
+            content: "➔";
+        }
+
+        .Desc-iten {
+            flex-grow: 1;
+            margin: 10px;
+            padding: 8px;
+        }
+
+        .Desc-iten p+p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #7b7676;
+        }
+
+        .categories-bg {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .categories-bg .categories-wrap .categorie img {
+            width: 100%;
+        }
+
+        .categories-bg .categories-wrap .categorie h3 {
+            padding: 0 0 0 10px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .categories-bg .categories-wrap .categorie h3 a {
+            transition: 0.3s;
+            letter-spacing: 0.8px;
+        }
+
+        .categories-bg .categories-wrap .categorie h3 a:hover {
+            color: #ffb4b4;
+        }
+
+        .categories-bg .categories-wrap .categorie h3 a::before {
+            content: "——";
+            color: #000;
+            padding: 0 20px 0 0;
+        }
+
+        .categories-bg .categories-bg-box {
+            height: 300px;
+            width: 1480px;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+        }
+
+        .banner2-wrap {
+            background-image: url("https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/banner4.jpg");
+            background-repeat: no-repeat;
+            flex-direction: column;
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .banner2-wrap p {
+            letter-spacing: 3px;
+        }
+
+        .banner2-wrap h2 {
+            font-size: 60px;
+            line-height: 72px;
+        }
+
+        .banner2-wrap button {
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            line-height: 22px;
+            padding: 15px 32px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .banner2-wrap button:hover {
+            background-color: #ffb4b4;
+        }
+
+        .half-wrap {
+            padding: 50px 0;
+            align-items: start;
+        }
+
+        .half-wrap img {
+            width: 100%;
+            box-shadow: #f6f6f6 48px -48px 0 2px;
+        }
+
+        .half-wrap .half-desc {
+            box-sizing: border-box;
+            width: 740px;
+            padding: 0 100px;
+        }
+
+        .half-wrap .half-desc h2 {
+            text-align: left;
+            font-size: 45px;
+            line-height: 45px;
+        }
+
+        .half-wrap .half-desc p {
+            text-align: left;
+            color: #adaaaa;
+            margin-bottom: 40px;
+        }
+
+        .half-wrap .half-desc button {
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            line-height: 22px;
+            padding: 15px 32px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .half-wrap .half-desc button:hover {
+            background-color: #ffb4b4;
+        }
+
+        .col3-wrap .col3-item-wrap {
+            flex: 1 0;
+            height: 300px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .col3-wrap .BELT {
+            background-image: url("https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/03/banner11.png");
+            background-size: 100%;
+        }
+
+        .col3-wrap .BAGS {
+            background-image: url("https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/03/banner12.png");
+            background-size: 100%;
+        }
+
+        .col3-wrap .SUNGLASSES {
+            background-image: url("https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/03/banner13.png");
+            background-size: 100%;
+        }
+
+        .product-item {
+            margin-bottom: 50px;
+        }
+
+        .product-item:hover [class*=mask] {
+            visibility: visible;
+        }
+
+        .product-item .pic {
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-item .pic img {
+            width: 100%;
+        }
+
+        .product-item .pic .tag {
+            font-size: 12px;
+            color: #fff;
+            padding: 5px 8px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            background-color: #f8bf00;
+            z-index: 2;
+        }
+
+        .product-item .pic .mask-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .product-item .pic .mask-bg .mask-icon {
+            color: #fff;
+            position: absolute;
+            bottom: 20px;
+            right: 0px;
+            z-index: 2;
+        }
+
+        .product-item .pic .mask-bg .mask-icon i {
+            padding: 0 5px;
+        }
+
+        .product-item [class*=mask] {
+            visibility: hidden;
+        }
+
+        .product-item ul li {
+            margin-top: 10px;
+        }
+
+        .product-item ul li:first-of-type {
+            text-align: left;
+            padding-top: 5px;
+            font-size: 12px;
+            color: #adadad;
+        }
+
+        .product-item ul li:last-of-type {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .Post-list-wrap {
+            margin: 0 auto;
+            padding: 15px 0;
+            justify-content: space-around;
+        }
+
+        .Post-list-wrap .Post {
+            width: 550px;
+        }
+
+        .Post-list-wrap .Post img {
+            width: 100%;
+        }
+
+        .Post-list-wrap .Post .Post-desc {
+            text-align: left;
+            box-sizing: border-box;
+            width: 500px;
+            height: 180px;
+            margin: -72px 20px 0 50px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            position: absolute;
+        }
+
+        .Post-list-wrap .Post .Post-desc h3,
+        .Post-list-wrap .Post .Post-desc div a {
+            font-size: 20px;
+            letter-spacing: 1.2px;
+            line-height: 28px;
+            text-align: left;
+        }
+
+        .Post-list-wrap .Post .Post-desc p {
+            padding: 13px 0;
+            line-height: 24px;
+            text-align: left;
+        }
+
+        .Post-list-wrap .Post .Post-desc span,
+        .Post-list-wrap .Post .Post-desc span a {
+            color: #adaaaa;
+        }
+
+        .Post-list-wrap .Post .Post-desc span+span::before {
+            content: "-";
+            padding: 0 10px;
+        }
+
+        .Post-list-wrap .Post .Post-desc a {
+            transition: 0.3s;
+        }
+
+        .Post-list-wrap .Post .Post-desc a:hover {
+            color: #ffb4b4;
+        }
+
+        .mailbox-wrap {
+            margin: 200px auto 0;
+            padding: 15px 0;
+            width: 1100px;
+            justify-content: space-around;
+            background-color: #fdece5;
+        }
+
+        .mailbox-wrap p {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 1.2px;
+            text-align: left;
+        }
+
+        .mailbox-wrap input,
+        .mailbox-wrap button {
+            font-size: 15px;
+            line-height: 22px;
+            padding: 13px 20px;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .mailbox-wrap input {
+            width: 300px;
+            text-align: left;
+        }
+
+        .mailbox-wrap button {
+            width: 130px;
+            background-color: #000;
+            color: #fff;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .mailbox-wrap button:hover {
+            background-color: #ffb4b4;
+        }
+
+        .footer {
+            padding: 40px 0 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .footer .murmur-wrap {
+            align-items: start;
+            margin: 20px 0;
+        }
+
+        .footer .murmur-wrap>div {
+            width: 296px;
+        }
+
+        .footer .murmur-wrap>div h4 {
+            line-height: 20px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            text-align: start;
+        }
+
+        .footer .murmur-wrap>div li,
+        .footer .murmur-wrap>div p {
+            text-align: start;
+            line-height: 24px;
+            margin-bottom: 5px;
+            color: #adaaaa;
+        }
+
+        .footer .murmur-wrap>div li a,
+        .footer .murmur-wrap>div p a {
+            color: #adaaaa;
+        }
+
+        .footer .murmur-wrap>div li a:hover,
+        .footer .murmur-wrap>div p a:hover {
+            color: #fde5e6;
+        }
+
+        .footer .copyright-wrap {
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 16px 20px;
+            margin: 0 7px;
+            color: #adaaaa;
+            border-top: 1px solid #adaaaa;
+        }
+
+        .footer .copyright-wrap .footer-ul li {
+            padding: 0 9px;
+        }
+
+        .footer .copyright-wrap .footer-ul li:hover {
+            color: #fde5e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <nav class="wrap">
+            <div class="shop-inform-wrap">
+                <p>Call us:+3(800)2345-6789</p>
+                <p>7 Days a week from 9:00 am to 7:00 pm</p>
+            </div>
+            <div class="shop-bar-wrap">
+                <div><select name="Currency" id="">
+                        <option>USD,$</option>
+                        <option>EUR,€</option>
+                    </select></div>
+                <div><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="Login">Login</div>
+                <div class="searchbar">
+                    <form action="">
+                        <label for="">
+                            <input class="search-bar" placeholder="Search..." type="input">
+                        </label>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+        <div class="header-wrap">
+            <div class="header-logo">
+                <a href="javascript:void(0)"><img
+                        src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/themes/variegated/assets/images/logo.png"
+                        alt="lVariegated"></a>
+            </div>
+            <ul class="header-menu-ul">
+                <li class="active"><a href="javascript:void(0)">HOME</a></li>
+                <li><a href="javascript:void(0)">ABOUT</a></li>
+                <li><a href="javascript:void(0)">FEATURES</a></li>
+                <li><a href="javascript:void(0)">BLOG</a></li>
+                <li><a href="javascript:void(0)">SHOP</a></li>
+                <li><a href="javascript:void(0)">CONTACTS</a></li>
+            </ul>
+            <ul class="header-socialmedia-ul">
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-google"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </div>
+        <div class="banner-col1">
+            <span>-20% SALE</span>
+            <h1>BE A CHERRY ON PIE IN ANY SITUATION</h1>
+            <p>Experiment, mix and showcase colors, textures and styles Be yourself and impress others!</p>
+            <a href="javascript:void(0)"> Read More</a>
+        </div>
+        <div class="banner-wrap">
+            <div class="banner-Desc-wrap">
+                <div class="Desc-iten red">
+                    <p>FREE STANDARD DELIVERY</h>
+                    <p>on order over $49</p>
+                </div>
+                <div class="Desc-iten orange">
+                    <p>30% OFF 100’S PANTYS</h>
+                    <p>use code: pantyup 30</p>
+                </div>
+                <div class="Desc-iten yellow">
+                    <p>20% STUDENT DISCOUNT PLUS</h>
+                    <p>free next day delivey, excludes sale.</p>
+                </div>
+            </div>
+        </div>
+        <h2>SHOP CATEGORIES</h2>
+        <div class="categories-bg">
+            <div class="categories-wrap">
+                <div class="categorie">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/cat5-275x376.jpg"
+                        alt="">
+                    <h3><a href="javascript:void(0)">Blazer</a></h3>
+                </div>
+                <div class="categorie">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/cat4-275x376.jpg"
+                        alt="">
+
+                    <h3><a href="javascript:void(0)">Dresses</a></h3>
+
+                </div>
+                <div class="categorie">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/cat3-275x376.jpg"
+                        alt="">
+
+                    <h3><a href="javascript:void(0)">Jumpsuits</a></h3>
+
+                </div>
+                <div class="categorie">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/cat2-275x376.jpg"
+                        alt="">
+
+                    <h3><a href="javascript:void(0)">New Arrivial</a></h3>
+
+                </div>
+
+            </div>
+            <div class="categories-bg-box orange"></div>
+        </div>
+        <div class="half-wrap">
+            <div class="img">
+                <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/image.jpg"
+                    alt="">
+            </div>
+            <div class="half-desc">
+                <h2>FAVORITE<br>BLOUSES</h2>
+                <p>Our new favourite blouses are defined by great all-over patterns and special details. Our new
+                    favourite blouses are defined by great all-over patterns and special details.</p>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+
+        <div class="col3-wrap">
+            <div class="col3-item-wrap BELT">
+                <h3>LEATHER BELT</h3>
+                <p>Our whole range of cotton, woolen and<br>leather wristbands </p>
+            </div>
+            <div class="col3-item-wrap BAGS">
+                <h3>LEATHER BAGS</h3>
+                <p>All of our leather made card holders<br>come now at a greatly reduced price.</p>
+            </div>
+            <div class="col3-item-wrap SUNGLASSES">
+                <h3>SUNGLASSES</h3>
+                <p>Buy a brand new, handmade leather belt<br> today and get a 15% discount!</p>
+            </div>
+        </div>
+        <h2>MOST RECENT POPULAR MODELS</h2>
+        <div class="product-wrap">
+            <div class="product-item">
+                <div class="pic"><img
+                        src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Buttoned-shirt_2-270x343.jpg"
+                        alt="">
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>BLAZERS JUMPSUITS</li>
+                    <li>
+                        <h3>BUTTONED SHIRT</h3>
+                    </li>
+                    <li>59.00$</li>
+                </ul>
+
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Checked-tunic_1-270x343.jpg"
+                        alt="">
+                    <div class="tag">Featured</div>
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>TROUSERS-SHORTS BLAZERS DRESSES</li>
+                    <li>
+                        <h3>CHECKED TUNIC</h3>
+                    </li>
+                    <li>69.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Embroidered-shirt_1-270x343.jpg"
+                        alt="">
+                    <div class="tag">Featured</div>
+                    <div class="mask-bg">
+
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>TROUSERS-SHORTS BLAZERS DRESSES JUMPSUITS</li>
+                    <li>
+                        <h3>EMBROIDERED SHIRT</h3>
+                    </li>
+                    <li>36.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Faux-leather-jacket-with-flowing-lapels_1-270x343.jpg"
+                        alt="">
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li class="categories">TROUSERS-SHORTS BLAZERS NEW ARRIVAL</li>
+                    <li>
+                        <h3>FAUX LEATHER JACKET WITH</h3>
+                    </li>
+                    <li class="price">96.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Lightweight-puffer-jacket_2-270x343.jpg"
+                        alt="">
+                    <div class="tag">Featured</div>
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>TROUSERS-SHORTS BLAZERS DRESSES JUMPSUITS</li>
+                    <li>
+                        <h3>LIGHTWEIGHT PUFFER JACKET</h3>
+                    </li>
+                    <li>54.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Polka-dot-shirt-dress_2-270x343.jpg"
+                        alt="">
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>TROUSERS-SHORTS BLAZERS DRESSES</li>
+                    <li>
+                        <h3>POLKA DOT SHIRT DRESS </h3>
+                    </li>
+                    <li>66.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Ripped-denim-jacket_2-270x343.jpg"
+                        alt="">
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>TROUSERS-SHORTS BLAZERS DRESSES JUMPSUITS</li>
+                    <li>
+                        <h3>RIPPED DENIM JACKET</h3>
+                    </li>
+                    <li>35.00$</li>
+                </ul>
+            </div>
+            <div class="product-item">
+                <div class="pic">
+                    <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/Suede-effect-dress_1-270x343.jpg"
+                        alt="">
+                    <div class="tag">Featured</div>
+                    <div class="mask-bg">
+                        <div class="mask-icon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li class="categories">TROUSERS-SHORTS BLAZERS DRESSES JUMPSUITS</li>
+                    <li>
+                        <h3>SUEDE EFFECT DRESS</h3>
+                    </li>
+                    <li class="price">89.00$</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner2-wrap">
+            <p>DEALY DEALS</p>
+            <h2>MODERN CASUAL<br>ESSENTIALS</h2>
+            <button>SHOP NOW</button>
+        </div>
+        <h5>LATEST FROM BLOG</h5>
+        <div class="Post-list-wrap">
+            <div class="Post">
+                <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/image11-565x382.jpg"
+                    alt="">
+                <div class="Post-desc">
+                    <h6><a href="javascript:void(0)">WHEN IN DOUBT, WEAR ROSE PUMPS</a></h6>
+                    <p>It’s always a good idea to invest in a good pair of nude pumps. It’s a timeless wardrobe staple
+                        just…</p>
+                    <span><a href="javascript:void(0)">22 February, 2018</a></span>
+                    <span>post by admin</span>
+                </div>
+            </div>
+            <div class="Post">
+                <img src="https://ld-wp.template-help.com/monstroid1/prod-14924/wp-content/uploads/2018/02/image12-565x382.jpg"
+                    alt="">
+                <div class="Post-desc">
+                    <h6><a href="javascript:void(0)">HEM YOUR PANTS FOR A SHOE HEIGHT</a></h6>
+                    <p>A mistake many people make is wearing pants (or dresses) that are too long or too short for their
+                        shoes.…</p>
+                    <span><a href="javascript:void(0)">22 February, 2018</a></span>
+                    <span>post by admin</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mailbox-wrap">
+            <p>GET THE LATEST NEWS DELIVERED DAILY!</p>
+            <div class="Subscribe">
+                <input type="email" placeholder="Enter please your email">
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+        <h5>@INSTAGRAM</h5>
+        <div class="footer">
+            <div class="murmur-wrap">
+                <div class="CATEGORIES">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)">Help & Contact Us</a></li>
+                        <li><a href="javascript:void(0)">Returns & Refunds</a></li>
+                        <li><a href="javascript:void(0)">Online Stores</a></li>
+                        <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="OUR STORE">
+                    <h4>OUR STORE</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)">About</a></li>
+                        <li><a href="javascript:void(0)">Blog</a></li>
+                        <li><a href="javascript:void(0)">Shop</a></li>
+                        <li><a href="javascript:void(0)">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="PROTFILE">
+                    <h4>PROTFILE</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)">Checkout</a></li>
+                        <li><a href="javascript:void(0)">My account</a></li>
+                        <li><a href="javascript:void(0)">Order tracking</a></li>
+                        <li><a href="javascript:void(0)">Help & support</a></li>
+                    </ul>
+                </div>
+                <div class="ABOUT US">
+                    <h4>ABOUT US</h4>
+                    <p>Variegated is the place where everyone can is able to find some clothing called to highlight
+                        one’s individuality! We are waiting right for you!</p>
+                </div>
+            </div>
+            <div class="copyright-wrap">
+                <p>© 2022 Variegated. All Rights Reserved.</p>
+                <ul class="footer-ul">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-google"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

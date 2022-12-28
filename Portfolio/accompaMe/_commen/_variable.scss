@@ -1,0 +1,95 @@
+//顏色（黑白色也可以使用，但不宣告在這9色內
+$primary: #3d5a86;
+$secondary: #7d9ab8;
+$info: #89849a;
+
+//文字顏色
+$text-color:#888;
+
+$background: #eeedec;
+
+$grown: #c59b89;
+$gray: #c4c8d0;
+
+$light-brown: #d7bdaf;
+$light-blue: #acb9cf;
+$light-pink: #cda59d;
+
+//字體大小
+body {
+  background-color: $background;
+}
+
+* {
+  font-family: "Noto Serif TC", serif;
+}
+
+//請參考下圖
+.button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: $primary;
+  border: 1px solid $primary;
+}
+
+.title {
+//h1請掛上這個
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  line-height: 1.5em;
+  font-size: 48px;
+  letter-spacing: 1.8px;
+  color: $primary;
+}
+
+.sub-title {
+//h2請掛上這個
+  font-family: "Noto Serif TC", serif;
+  line-height: 1.5em;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: $secondary;
+}
+
+.third-subtitle {
+//h3請掛上這個
+  font-family: "Noto Serif TC", serif;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  color: $info;
+}
+p,
+h4,
+a,
+h5,
+h6,
+span,
+tl,
+td,
+.text {
+//text是指任何你用非heading標籤但放文字的地方
+  font-family: "Noto Serif TC", serif;
+  line-height: 1.5em;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  color: $text-color;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.bg-A {
+  background-color: $light-blue;
+}
+.bg-B {
+  background-color: $light-brown;
+}
+.bg-C {
+  background-color: $light-pink;
+}

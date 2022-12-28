@@ -1,0 +1,143 @@
+$pink: #e4c5ab;
+$dark-green: #716348;
+$black: #322e22;
+$dark-gray: #a29a8d;
+$light-gray: #b1b2ad;
+$grown: #ae8d65;
+$light-green: #9c9473;
+
+@font-face {
+    font-family: Cubic;
+    src: url(./Cubic_11_1.010_R.woff);
+}
+
+*,
+h1,
+li,
+p,
+input {
+    font-family: Cubic;
+}
+
+h1 {
+    margin: 30px 0;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+
+h1::before {
+    content: "---";
+}
+
+h1::after {
+    content: "---";
+}
+
+.wrap {
+    border: 1px solid #000;
+    position: relative;
+    margin: 10px auto;
+    max-width: 1000px;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 0px 30px;
+    font-size: 0;
+    width: 100%;
+    
+}
+
+.wrap img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    filter: contrast(1);
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.wrap::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: repeating-linear-gradient($dark-green 0%, $dark-green 4%, transparent 4%, transparent 96%, $dark-green 96%, $dark-green 100%),
+        repeating-linear-gradient(0.25turn, $dark-green 0%, $dark-green 4%, transparent 4%, transparent 96%, $dark-green 96%, $dark-green 100%);
+    background-size: 10px 10px;
+}
+
+input {
+    padding: 0 10px;
+    color:$dark-green;
+    outline: none;
+    border: none;
+}
+
+.txt {
+    width: 70%;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.saveBtn {
+    box-sizing: border-box;
+    width: 30%;
+    height: 30px;
+    background-color:$dark-green;
+    color: #fff;
+}
+
+.saveBtn:hover {
+    background-color:$light-green;
+}
+
+li {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    padding: 4px;
+    margin-top: 10px;
+    input{
+        color: $light-gray;
+        background-color: darken($grown,40%);
+        width: 10%;
+        height: 30px;
+        outline: none;
+        border: none;
+    }
+    input:hover{
+        background-color: $dark-green;
+    }
+    .txt{
+        color: #fff;
+        background-color:rgba($dark-green, $alpha: 0.8);
+    }
+    li [type="text"]{
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+    li{
+        margin-top: 10px;
+    }
+}
+li.checked{
+    color: $light-gray;
+    text-decoration:line-through;
+}
+@media screen and (max-width:768px) {
+    li [type="text"]{
+        display: block;
+        width: 100%;
+    }
+    li input{
+        width: 30%;
+    }
+}

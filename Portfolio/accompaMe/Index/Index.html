@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- google-font extra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS Reset-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!-- Font Icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Bootstrap5-->
+    <!-- 放在head-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="container pt-3 flx-row jcb">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="https://fakeimg.pl/80x24/?text=Logo" alt="">
+                </a>
+            </div>
+            <div class="header-menu flx-row">
+                <ul class="flx-row ps-0 product-menu">
+                    <li class="me-2 main-menu">
+                        <a href="../BlogSearch/BlogSearch.html">部落格分類</a>
+                        <!--商品子分類頁-->
+                        <ul class="sub-menu ps-0 pt-3">
+                            <li><a class="p-2" href="../BlogAuthor/BlogAuthor.html"><i class="fa-solid fa-brain me-2"></i>作者專欄</a></li>
+                            <li><a class="p-2" href="../BlogPage/BlogPage.html"><i class="fa-solid fa-ear-listen me-2"></i>部落格文章</a>
+                            </li>
+                            <li><a class="p-2" href="../BlogSearch/BlogSearch.html"><i class="fa-solid fa-heart me-2"></i>部落格分類</a></li>
+                            <li><a class="p-2" href="javascript:;"><i class="fa-solid fa-socks me-2"></i>子分類4</a></li>
+                        </ul>
+                    </li>
+                    <li class="me-2"><a href="javascript:;">成為出租者</a></li>
+                    <li class="me-2"><a href="./contactus.html">聯絡我們</a></li>
+    
+                </ul>
+                <ul class="flx-row  ps-0">
+                    <li class="cart me-4"><a href="javascript:;">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-number text rounded-circle">0</div>
+                        </a>
+                    </li>
+                    <li class="me-2"><a href="javascript:;">登入</a></li>
+                    <li class="me-2 main-menu"><a href="javascript:;"><i class="fa-solid fa-user-large"></i></a>
+                        <!--商品子分類頁-->
+                        <ul class="sub-menu pofile ps-0 pt-3">
+                            <li class="pofile-pic p-lg-3"><img class="rounded-circle" src="./img/example.jpg"
+                                    alt="">Hi,筑筑</li>
+                            <li><a class="p-2" href="javascript:;">編輯個人資料</a></li>
+                            <li><a class="p-2" href="javascript:;">我的收藏</a></li>
+                            <li><a class="p-2" href="javascript:;">成為出租者</a></li>
+                            <li><a class="p-2" href="javascript:;">歷史訂單</a></li>
+                            <li><a class="p-2" href="javascript:;">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- Banner 活動輪播 -->
+    <!-- 缺按鈕 -->
+    <div class="swiper banner-slide-wrap">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide banner-slide">
+                <div>
+                    <div class="banner-slide-txt">
+                        <video src="./img/index03.mp4" autoplay mute loop width="100%"></video>
+                        <div class="slide-txt-content">
+                            <h1 class="title tas">-accompa<span>Me</span>
+                            </h1>
+                            <p class="tas text text-content-quote">一個人的晚餐無聊寂寞，兩個朋友能開心的直說</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide banner-slide">
+                <div>
+                    <div class="banner-slide-txt">
+                        <video src="./img/index01.mp4" autoplay mute loop width="100%"></video>
+                        <div class="slide-txt-content">
+                            <h1 class="title tas">-accompa<span>Me</span>-
+                            </h1>
+                            <p class="tas text text-content-quote">我可以跟在你身後，像影子追著光夢遊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!--產品項目展示牆-->
+    <section class="showbox-group-wrap">
+        <h2 class="sub-title"><strong>「啊！好想找個伴！」</strong>你曾經這樣想著</h2>
+        <div class="container">
+            <div class="showbox-wrap">
+                <div class="pic"><img src="./img/float.001.jpeg" alt=""></div>
+                <div class="text-wrap">
+                    <div class="text bd-line1">
+                        <h3 class="third-title">來人！陪我逛街血拼</h3>
+                        <p class="text-desc">想找個人陪伴，享受輕鬆無負擔的交友關係...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showbox-wrap">
+                <div class="pic"><img src="./img/float.002.jpeg" alt=""></div>
+                <div class="text-wrap">
+                    <div class="text bd-line1">
+                        <h3 class="third-title">拜託！我不要獨自出席</h3>
+                        <p class="text-desc">單身回家過年，親戚問東問西好麻煩...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showbox-wrap">
+                <div class="pic"><img src="./img/float.003.jpeg" alt=""></div>
+                <div class="text-wrap">
+                    <div class="text bd-line1">
+                        <h3 class="third-title">跪求！旅遊達人帶玩</h3>
+                        <p class="text-desc">不知道異地有什麼好玩的，需要有人在地嚮導...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="sub-title">你的需求，我們都放在心上</p>
+    </section>
+    <!--產品swiper-->
+
+    </section>
+    <!--產品優勢-->
+    <section class="us-wrap">
+        <div class="container ">
+            <h2 class="sub-title">accompaMe：創造最有價值陪伴</h2>
+            <div class="cards-group ">
+                <div class="cards ">
+                    <div class="card-top">
+                        <i class="fa-brands fa-gratipay"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="third-subtitle">多元需求</h3>
+                        <p>更多的欣賞、真實和樂趣。</p>
+                    </div>
+                </div>
+                <div class="cards ">
+                    <div class="card-top">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="third-subtitle">友善社群</h3>
+                        <p>沒有評論功能，社群無私和諧</p>
+                    </div>
+                </div>
+                <div class="cards ">
+                    <div class="card-top">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="third-subtitle">信任機制</h3>
+                        <p>最高規格 IT 設備、以及 SMS 驗證</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group-wrap">
+            <img src="./img/bgc.jpeg" alt="">
+        </div>
+    </section>
+    <!--點我立即註冊-->
+    <section class="wrap install-wrap">
+        <div class="container">
+            <h2 class="sub-title">我們的三大優勢</h2>
+            <div class="cards-wrap">
+                <div class="card-main">
+                    <div class="cards-group">
+                        <img src="./img/phone.png" alt="person" data-speed=20 class="layer">
+                        <img src="./img/phone.png" alt="person" data-speed=5 class="layer">
+                        <img src="./img/phone.png" alt="person" data-speed=0 class="layer">
+                    </div>
+                </div>
+                <div class="cards-aside">
+                    <p>我們擁有大量的會員庫，可以給您最合適的服務方案！讓我們把時間更有效率地，專注在彼此陪伴上！</p>
+                    <ul class="ps-0">
+                        <li><i class="fa-solid fa-square-check"></i>超好選！20-80歲的少女、阿姨、弟弟、大叔滑不完</li>
+                        <li><i class="fa-solid fa-square-check"></i>超便利！可立即下單，服務時間地點任您挑選</li>
+                        <li><i class="fa-solid fa-square-check"></i>超好用！支援多種第三方支付</li>
+                    </ul>
+                    <button class="button">立刻註冊</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="swiper area-slide-wrap container">
+        <h2 class="sub-title">南北卡友大串連</h2>
+        <p class="text">台灣超過300+註冊會員，怎麼找，怎麼點，都能找到我們的用戶</p>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-style">台北</div>
+            <div class="swiper-slide slide-style">新北</div>
+            <div class="swiper-slide slide-style">桃園</div>
+            <div class="swiper-slide slide-style">新竹</div>
+            <div class="swiper-slide slide-style">苗栗</div>
+            <div class="swiper-slide slide-style">台中</div>
+            <div class="swiper-slide slide-style">台南</div>
+            <div class="swiper-slide slide-style">高雄</div>
+            <div class="swiper-slide slide-style">花東</div>
+        </div>
+    </div>
+    <!--Blog-->
+    <section class="blog-wrap">
+        <div class="container">
+            <h2 class="sub-title">近期好文</h2>
+            <div class="blog-group">
+                <a href="../BlogPage/BlogPage.html">
+                    <div class="blog">
+
+                        <div class="blog-img"><img src="./img/blog01.jpg" alt="">
+                            <div class="blog-img-icon">
+
+                                <i class="fa-regular fa-heart"></i>
+                                <p>87</p>
+                            </div>
+                        </div>
+                        <div class="blog-content-wrap">
+                            <div class="blog-content">
+                                <h4 class="third-subtitle">愛情可以從一個吻開始嗎？</h4>
+                                <p><i class="fa-regular fa-clock"></i>20 July 2022</p>
+                                <p>我點木那汁耍兄雪目友冬眼，甲星身找母玩後免校泉裏，隻助記穴昔詞完能掃干吧，示婆意呀那土百耍，鳥包打告杯汁登旦喝。</p>
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="../BlogPage/BlogPage.html">
+                    <div class="blog">
+
+                        <div class="blog-img"><img src="./img/blog03.jpg" alt="">
+                            <div class="blog-img-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>22</p>
+                            </div>
+                        </div>
+                        <div class="blog-content-wrap">
+                            <div class="blog-content">
+                                <h4 class="third-subtitle">不好色卻容易出軌的星座女</h4>
+                                <p><i class="fa-regular fa-clock"></i>20 July 2022</p>
+                                <p>葉走村多己乾請位抱甲吧聽耍羊花少，從假躲尺同杯冬間几我清封足前幫，米是老，口連玉完視象扒水麼牠皮急間條，抄辛飛三。尾神苗反戊天布間高第都冰，哭玉錯個發自哭打裏姐子幸五乞事牙假誰不。
+                                </p>
+                                <p>Read More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="../BlogPage/BlogPage.html">
+                    <div class="blog">
+
+                        <div class="blog-img"><img src="./img/blog02.jpg" alt="">
+                            <div class="blog-img-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <p>64</p>
+                            </div>
+                        </div>
+                        <div class="blog-content-wrap">
+                            <div class="blog-content">
+                                <h4 class="third-subtitle">夏日十大旅遊景點推薦</h4>
+                                <p><i class="fa-regular fa-clock"></i>20 July 2022</p>
+                                <p>實月詞幾拍各寫讀童食即借申化！玉麼呀重裏開成再見個東孝虎雪。皮愛很話車秋原能寸裝氣百合「爪民壯比多讀詞你」飛。</p>
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <a href=""></a>
+        </div>
+    </section>
+    <!--用戶回饋-->
+    <section class="comment-wrap">
+        <h2 class="sub-title">最真實的用戶心聲</h2>
+        <div class="swiper comment-testimonial container">
+            <div class="swiper-wrapper comment-wrap">
+                <div class="slide swiper-slide">
+                    <div class="img-wrap">
+                        <img src="./img/tzuyu1.jpeg" alt="">
+                    </div>
+                    <div class="text-wrap">
+                        <div class="text text-title">Demmy</div>
+                        <div class="text text-content-quote">在accompaMe找到一個好家教，有了Angus的耐心教學和陪伴，不但考試都考100分，還常常在地上撿到100塊。
+                        </div>
+                        <div class="text text-tag">#讀書家教</div>
+                        <div class="icon-wrap">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <div class="img-wrap">
+                        <img src="./img/tzuyu2.jpeg" alt="">
+                    </div>
+                    <div class="text-wrap">
+                        <div class="text text-title">Kerina.H</div>
+                        <div class="text text-content-quote">
+                            在這裡認識了優質的男性Wei，享受很有質感約會行程。每次約會他都會用人氣外送平台-Woodin，帶一杯珍奶給我。<br>和他想處真的很開心，同時還不小心學會了串綠界金流！</div>
+                        <div class="text text-tag">#戀愛約會</div>
+                        <div class="icon-wrap">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <div class="img-wrap">
+                        <img src="./img/tzuyu3.jpeg" alt="">
+                    </div>
+                    <div class="text-wrap">
+                        <div class="text text-title">Lydia</div>
+                        <div class="text text-content-quote">
+                            剛跟前男友分手想不開，還好在accompanyMe認識了Tommy，體貼的他常常半夜買宵夜、早上帶早餐來安慰我。<br>現在我找到更好更有錢的40歲大叔，謝謝accompanyMe！
+                        </div>
+                        <div class="text text-tag">#心靈諮商</div>
+                        <div class="icon-wrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next slide-btn"></div>
+            <div class="swiper-button-prev slide-btn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <div class="container d-flex flex-column align-items-center">
+            <div class="social-wrap">
+                <a href="javascript:;"><i class="fa-brands fa-line"></i></a>
+                <a href="javascript:;"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="javascript:;"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <p>accompaMe © 2022 All Rights Reserved</p>
+    </footer>
+    <!--Footer-->
+
+
+    <!-- 放在body結尾-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- 放在body結尾-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            let len = 50; // 超過50個字以"..."取代
+            $(".blog-content>p:nth-of-type(2)").each(function (i) {
+                if ($(this).text().length > len) {
+                    $(this).attr("title", $(this).text());
+                    var text = $(this).text().substring(0, len - 1) + "...";
+                    $(this).text(text);
+                }
+            });
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".banner-slide-wrap", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+        });
+        var swiper = new Swiper(".area-slide-wrap", {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            slidesPerView: 1,
+            spaceBetween: 5,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            }
+        });
+        var swiper = new Swiper(".comment-testimonial", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
+
+
+
+    <script>
+        // let wrap=document.querySelector('.card-main');
+        // window.addEventListener('scroll',picMove);
+        // function picMove(e){
+        //     console.log(e);
+        //     wrap.querySelectorAll('.layer:not(:last-child)').forEach(layer => {
+        //         let speed=layer.getAttribute("data-speed");
+        //         let x=(wrap.getBoundingClientRect().width - 5*speed)/500;
+        //         let y=(wrap.getBoundingClientRect().width - 5*speed)/500;
+        //         console.log(x);
+        //         console.log(y);
+        //         layer.style.transform=`translateX(${-x}px) translateY(${-y}px)`;
+        //     });
+        // }
+    </script>
+    </script>
+</body>
+
+</html>

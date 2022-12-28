@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "min01";
+    src: "./font/GenYoMinTW-L-01.woff" format("woff");
+}
+@font-face {
+   font-family: "min02";
+    src: "./font/ThePeakFontBeta_V0_101.woff" format("woff");
+}
+h1,h2,p,span,div{
+    text-align: center;
+    font-family: min01 ,serif;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.col-sb{
+    display: flex;
+    justify-content: space-between;
+}
+$gray-purple:#d89d8b;
+$black:#2a211d;
+$light-brown:#eee2d7;
+$middle-brown:#b58e7e;
+$dark-brawn:#653c29;
+$gray-pink:#ebcac0;
+$skin:#f1ae8a;
+$dark-gray:#6e5c54;
+$brown:#a15a2b;
+$light-skin:#facfac;
+$gray-brown:#935e49;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400&family=Mingzat&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@300;400;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./hack02.css">
+</head>
+
+<body>
+    <div class="wrap">
+    <div class="answerShow col">
+        <div class="answerShow-text">
+            <span>0</span>
+            <span>-</span>
+            <span>100</span>
+        </div>
+    </div>
+    <div class="menu col">
+        <button>START</button>
+        <button>ANSWER</button>
+    </div>
+    <div class="answer-box col">
+        <div> Please Input:</div>
+        <div class="answer-area"></div>
+    </div>
+    <div class="input-box col">
+    </div>
+</div>
+    <script>
+        let ans;
+        let min =document.querySelector(".answerShow-text>span:first-child");
+        let max =document.querySelector(".answerShow-text>span:last-child");
+        let start_btn =document.querySelectorAll(".menu>button")[0];
+        let answer_btn =document.querySelectorAll(".menu>button")[1];
+        let user=document.querySelector(".answer-area");
+        let answerBox=document.querySelector(".answer-box");
+        window.onload = () => {
+            createButton();
+        }
+        start_btn.onclick=()=>{
+            answerBox.style.display="flex";
+            start();
+            creatAns();
+        };
+        answer_btn.onclick=()=>{
+            alert(ans);
+        }
+        function inputAns(ans){
+            if(user.innerText=="安妮雅不喜歡這個答案"||user.innerText=="Start"){
+                user.style.color="#a77b7b";
+                user.innerText="";
+            }
+            user.innerText +=ans;   
+        }
+        function createButton() {
+            let inputBox = document.querySelector(".input-box");
+            for (i = 1; i < 13; i++) {
+                let button = document.createElement("button");
+                if (i < 10) {
+                    button.innerText = i;
+                    inputBox.appendChild(button);
+                    button.style.order = i;
+                    button.onclick = () => {
+                        inputAns(button.innerText);
+                    }
+                }
+                else if (i == 10) {
+
+                    button.innerText = 0;
+                    inputBox.appendChild(button);
+                    button.style.order = 11;
+                    button.onclick = () => {
+                        inputAns(button.innerText);
+                    }
+                }
+                else if (i == 11) {
+                    button.innerText = "Submit";
+                    inputBox.appendChild(button);
+                    button.style.order = 10;
+                    button.onclick = () => {
+                        judge(+user.innerText);
+                    }
+                }
+                else{
+                    button.innerText = "Reset";
+                    button.style.order = 12;
+                    button.onclick = () => {
+                        user.innerText="";
+                    }
+                }
+                inputBox.appendChild(button);
+            }
+        }
+        function start(){
+            user.style.color="#ffe4e1";
+            user.innerText="Start";
+            creatAns();
+        }
+        function judge(userAns){
+            if(user.innerText=="Start"||user.innerText=="安妮雅不喜歡這個答案" || userAns>max.innerText || userAns<min.innerText ||userAns == min.innerText || userAns == max.innerText){
+                user.innerText ="安妮雅不喜歡這個答案";
+                user.style.color="#a77b7b";
+            }
+            else if(userAns<ans){
+                min.innerText=userAns;
+                user.innerText="";
+            }else if(userAns==ans){
+                alert("GoodGame");
+                answerBox.style.display="none";
+                user.innerText="";
+                max.innerText=100;
+                min.innerText=0;
+            }else{
+                max.innerText=userAns;
+                user.innerText="";
+            }
+        }
+        function creatAns(){
+            ans = Math.floor(Math.random() * 100)+1;
+        }
+    </script>
+</body>
+
+</html>
