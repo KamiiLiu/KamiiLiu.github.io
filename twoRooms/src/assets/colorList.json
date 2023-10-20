@@ -1,0 +1,17 @@
+[
+    {
+        "label": "blue",
+        "colorLight": "#67A0B8",
+        "colorDark": "1d3a5d"
+    },
+    {
+        "label": "red",
+        "colorLight": "#DC5258",
+        "colorDark": "#401618"
+    },
+    {
+        "label": "grey",
+        "colorLight": "#8b8b8b",
+        "colorDark": "#4c4c4c"
+    }
+]

@@ -1,0 +1,121 @@
+[
+    {
+        "key": "President",
+        "label": "總統",
+        "desc":"在終局不炸彈客在同一個房間",
+        "color": "blue",
+        "selected": true
+    },
+    {
+        "key": "President's Daughter",
+        "label": "總統女兒",
+        "desc":"總統的職務代理人",
+        "color": "blue",
+        "selected": true
+    },
+    {
+        "key": "Bomber",
+        "label": "炸彈客",
+        "desc":"在終局跟總統在同一個房間",
+        "color": "red",
+        "selected": true
+    },
+    {
+        "key": "Martyr",
+        "label": "殉道者",
+        "desc":"炸彈客的職務代理人",
+        "color": "red",
+        "selected": true
+    },
+    {
+        "key": "Doctor",
+        "label": "醫生",
+        "desc":"遊戲結束前與總統分享卡片",
+        "color": "blue",
+        "selected": true
+    },
+    {
+        "key": "Nurse",
+        "label": "護士",
+        "desc":"醫生的職務代理人",
+        "color": "blue",
+        "selected": true
+    },
+    {
+        "key": "Engineer",
+        "label": "工程師",
+        "desc":"遊戲結束前與炸彈客分享卡片",
+        "color": "red",
+        "selected": true
+    },
+    {
+        "key": "Tinkerer",
+        "label": "修補匠",
+        "desc":"工程師的職務代理人",
+        "color": "red",
+        "selected": true
+    },
+    {
+        "key": "Clown",
+        "label": "小丑",
+        "desc":"時刻保持微笑",
+        "color": "both",
+        "selected": true
+    },
+    {
+        "key": "Negotiator",
+        "label": "談判專家",
+        "desc":"你只能執行分享卡片",
+        "color": "both",
+        "selected": true
+    },
+    {
+        "key": "Coy Boy",
+        "label": "靦腆少年",
+        "desc":"你只能執行分享顏色",
+        "color": "both",
+        "selected": true
+    },
+    {
+        "key": "Spy",
+        "label": "間諜",
+        "desc":"你的卡片顏色與你效忠的隊伍恰好相反",
+        "color": "both",
+        "selected": true
+    },
+    {
+        "key": "Mayor",
+        "label": "市長",
+        "desc":"公開卡片後，你的票永久計為兩票",
+        "color": "both",
+        "selected": false
+    },
+    {
+        "key": "Usurper",
+        "label": "篡位者",
+        "desc":"你可以在前四回合中，保底成為一次室長",
+        "color": "both",
+        "selected": false
+    },
+    {
+        "key": "Security",
+        "label": "保安",
+        "desc":"你可以擁有一次扣押一名人質的資格",
+        "color": "both",
+        "selected": false
+    },
+    {
+        "key": "Conman",
+        "label": "騙子",
+        "desc":"明明約好分享顏色，可要求對方展示卡片",
+        "color": "both",
+        "selected": false
+    },
+    {
+        "key": "Shy Guy",
+        "label": "害羞小子",
+        "desc":"無法進行任何卡片行為",
+        "color": "both",
+        "selected": false
+    }
+]
